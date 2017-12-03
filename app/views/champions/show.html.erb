@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @champion.name %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @champion.game %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @champion.image %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @champion.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @champion.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_champion_path(@champion) %> |
+<%= link_to 'Back', champions_path %>
