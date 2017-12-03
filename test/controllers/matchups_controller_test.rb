@@ -17,7 +17,7 @@ class MatchupsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create matchup" do
     assert_difference('Matchup.count') do
-      post matchups_url, params: { matchup: { blue_team_id: @matchup.blue_team_id, created_at: @matchup.created_at, date: @matchup.date, looser_id: @matchup.looser_id, rank: @matchup.rank, red_team_id: @matchup.red_team_id, updated_at: @matchup.updated_at, winner_id: @matchup.winner_id } }
+      post matchups_url, params: { matchup: { blue_team_id: @matchup.blue_team_id, create_at: @matchup.create_at, loose_id: @matchup.loose_id, rank: @matchup.rank, red_team_id: @matchup.red_team_id, time: @matchup.time, tournament_id: @matchup.tournament_id, updated_at: @matchup.updated_at, winner_id: @matchup.winner_id } }
     end
 
     assert_redirected_to matchup_url(Matchup.last)
@@ -34,7 +34,7 @@ class MatchupsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update matchup" do
-    patch matchup_url(@matchup), params: { matchup: { blue_team_id: @matchup.blue_team_id, created_at: @matchup.created_at, date: @matchup.date, looser_id: @matchup.looser_id, rank: @matchup.rank, red_team_id: @matchup.red_team_id, updated_at: @matchup.updated_at, winner_id: @matchup.winner_id } }
+    patch matchup_url(@matchup), params: { matchup: { blue_team_id: @matchup.blue_team_id, create_at: @matchup.create_at, loose_id: @matchup.loose_id, rank: @matchup.rank, red_team_id: @matchup.red_team_id, time: @matchup.time, tournament_id: @matchup.tournament_id, updated_at: @matchup.updated_at, winner_id: @matchup.winner_id } }
     assert_redirected_to matchup_url(@matchup)
   end
 

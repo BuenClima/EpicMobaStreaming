@@ -1,6 +1,7 @@
 class Team < ApplicationRecord
   has_many :players
-  has_many :matchups
+  has_many :tournament_teams
+  has_many :tournaments, through: :tournament_teams
   validates :name,
             :origin,
             :coach,

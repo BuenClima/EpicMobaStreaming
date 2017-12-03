@@ -8,10 +8,11 @@
       <th>Blue team</th>
       <th>Red team</th>
       <th>Winner</th>
-      <th>Looser</th>
-      <th>Date</th>
+      <th>Loose</th>
+      <th>Tournament</th>
+      <th>Time</th>
       <th>Rank</th>
-      <th>Created at</th>
+      <th>Create at</th>
       <th>Updated at</th>
       <th colspan="3"></th>
     </tr>
@@ -23,10 +24,11 @@
         <td><%= matchup.blue_team %></td>
         <td><%= matchup.red_team %></td>
         <td><%= matchup.winner %></td>
-        <td><%= matchup.looser %></td>
-        <td><%= matchup.date %></td>
+        <td><%= matchup.loose %></td>
+        <td><%= matchup.tournament %></td>
+        <td><%= matchup.time %></td>
         <td><%= matchup.rank %></td>
-        <td><%= matchup.created_at %></td>
+        <td><%= matchup.create_at %></td>
         <td><%= matchup.updated_at %></td>
         <td><%= link_to 'Show', matchup %></td>
         <td><%= link_to 'Edit', edit_matchup_path(matchup) %></td>

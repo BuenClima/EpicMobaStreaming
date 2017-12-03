@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :tournament_teams
+  resources :tournaments
   resources :players_map_performances
   resources :players_picks
   resources :matchups
