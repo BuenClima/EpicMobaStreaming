@@ -1,6 +1,7 @@
 class Champion < ApplicationRecord
   belongs_to :game
-  has_and_belongs_to_many :players
+  has_many :players_picks
+  has_many :players, through: :players_picks
   validates :name,
             :image,
             :game_id,
