@@ -1,0 +1,47 @@
+<%= form_with(model: statistic, local: true) do |form| %>
+  <% if statistic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(statistic.errors.count, "error") %> prohibited this statistic from being saved:</h2>
+
+      <ul>
+      <% statistic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :statistic_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ratio %>
+    <%= form.text_field :ratio, id: :statistic_ratio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player_id %>
+    <%= form.text_field :player_id, id: :statistic_player_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :team_id %>
+    <%= form.text_field :team_id, id: :statistic_team_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :created_at %>
+    <%= form.datetime_select :created_at, id: :statistic_created_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :updated_at %>
+    <%= form.datetime_select :updated_at, id: :statistic_updated_at %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

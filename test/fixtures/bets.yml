@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  ratio: 1.5
+  matchup: one
+  refered: MyString
+
+two:
+  name: MyString
+  ratio: 1.5
+  matchup: two
+  refered: MyString

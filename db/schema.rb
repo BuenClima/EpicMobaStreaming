@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171203163952) do
+ActiveRecord::Schema.define(version: 20171203165942) do
+
+  create_table "bets", force: :cascade do |t|
+    t.string "name"
+    t.float "ratio"
+    t.integer "matchup_id"
+    t.string "refered"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["matchup_id"], name: "index_bets_on_matchup_id"
+  end
 
   create_table "champions", force: :cascade do |t|
     t.string "name"
@@ -87,6 +97,17 @@ ActiveRecord::Schema.define(version: 20171203163952) do
     t.datetime "updated_at", null: false
     t.index ["champion_id"], name: "index_players_picks_on_champion_id"
     t.index ["player_id"], name: "index_players_picks_on_player_id"
+  end
+
+  create_table "statistics", force: :cascade do |t|
+    t.string "name"
+    t.float "ratio"
+    t.integer "player_id"
+    t.integer "team_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["player_id"], name: "index_statistics_on_player_id"
+    t.index ["team_id"], name: "index_statistics_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|
