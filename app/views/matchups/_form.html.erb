@@ -1,0 +1,57 @@
+<%= form_with(model: matchup, local: true) do |form| %>
+  <% if matchup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(matchup.errors.count, "error") %> prohibited this matchup from being saved:</h2>
+
+      <ul>
+      <% matchup.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :blue_team_id %>
+    <%= form.text_field :blue_team_id, id: :matchup_blue_team_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :red_team_id %>
+    <%= form.text_field :red_team_id, id: :matchup_red_team_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :winner_id %>
+    <%= form.text_field :winner_id, id: :matchup_winner_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :looser_id %>
+    <%= form.text_field :looser_id, id: :matchup_looser_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.datetime_select :date, id: :matchup_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rank %>
+    <%= form.text_field :rank, id: :matchup_rank %>
+  </div>
+
+  <div class="field">
+    <%= form.label :created_at %>
+    <%= form.datetime_select :created_at, id: :matchup_created_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :updated_at %>
+    <%= form.datetime_select :updated_at, id: :matchup_updated_at %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

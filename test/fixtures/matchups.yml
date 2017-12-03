@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  blue_team: one
+  red_team: one
+  winner: one
+  looser: one
+  date: 2017-12-03 15:57:47
+  rank: MyString
+  created_at: 2017-12-03 15:57:47
+  updated_at: 2017-12-03 15:57:47
+
+two:
+  blue_team: two
+  red_team: two
+  winner: two
+  looser: two
+  date: 2017-12-03 15:57:47
+  rank: MyString
+  created_at: 2017-12-03 15:57:47
+  updated_at: 2017-12-03 15:57:47

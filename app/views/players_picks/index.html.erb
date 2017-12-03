@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Players Picks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Champion</th>
+      <th>Pick rate</th>
+      <th>Win rate</th>
+      <th>Kda</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @players_picks.each do |players_pick| %>
+      <tr>
+        <td><%= players_pick.player %></td>
+        <td><%= players_pick.champion %></td>
+        <td><%= players_pick.pick_rate %></td>
+        <td><%= players_pick.win_rate %></td>
+        <td><%= players_pick.kda %></td>
+        <td><%= link_to 'Show', players_pick %></td>
+        <td><%= link_to 'Edit', edit_players_pick_path(players_pick) %></td>
+        <td><%= link_to 'Destroy', players_pick, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Players Pick', new_players_pick_path %>

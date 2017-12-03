@@ -1,0 +1,37 @@
+<%= form_with(model: players_map_performance, local: true) do |form| %>
+  <% if players_map_performance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(players_map_performance.errors.count, "error") %> prohibited this players_map_performance from being saved:</h2>
+
+      <ul>
+      <% players_map_performance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :player_id %>
+    <%= form.text_field :player_id, id: :players_map_performance_player_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :map_id %>
+    <%= form.text_field :map_id, id: :players_map_performance_map_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :win_rate %>
+    <%= form.text_field :win_rate, id: :players_map_performance_win_rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :loose_rate %>
+    <%= form.text_field :loose_rate, id: :players_map_performance_loose_rate %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

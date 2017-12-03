@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Blue team:</strong>
+  <%= @matchup.blue_team %>
+</p>
+
+<p>
+  <strong>Red team:</strong>
+  <%= @matchup.red_team %>
+</p>
+
+<p>
+  <strong>Winner:</strong>
+  <%= @matchup.winner %>
+</p>
+
+<p>
+  <strong>Looser:</strong>
+  <%= @matchup.looser %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @matchup.date %>
+</p>
+
+<p>
+  <strong>Rank:</strong>
+  <%= @matchup.rank %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @matchup.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @matchup.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_matchup_path(@matchup) %> |
+<%= link_to 'Back', matchups_path %>

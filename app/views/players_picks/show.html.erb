@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @players_pick.player %>
+</p>
+
+<p>
+  <strong>Champion:</strong>
+  <%= @players_pick.champion %>
+</p>
+
+<p>
+  <strong>Pick rate:</strong>
+  <%= @players_pick.pick_rate %>
+</p>
+
+<p>
+  <strong>Win rate:</strong>
+  <%= @players_pick.win_rate %>
+</p>
+
+<p>
+  <strong>Kda:</strong>
+  <%= @players_pick.kda %>
+</p>
+
+<%= link_to 'Edit', edit_players_pick_path(@players_pick) %> |
+<%= link_to 'Back', players_picks_path %>

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Matchups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Blue team</th>
+      <th>Red team</th>
+      <th>Winner</th>
+      <th>Looser</th>
+      <th>Date</th>
+      <th>Rank</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @matchups.each do |matchup| %>
+      <tr>
+        <td><%= matchup.blue_team %></td>
+        <td><%= matchup.red_team %></td>
+        <td><%= matchup.winner %></td>
+        <td><%= matchup.looser %></td>
+        <td><%= matchup.date %></td>
+        <td><%= matchup.rank %></td>
+        <td><%= matchup.created_at %></td>
+        <td><%= matchup.updated_at %></td>
+        <td><%= link_to 'Show', matchup %></td>
+        <td><%= link_to 'Edit', edit_matchup_path(matchup) %></td>
+        <td><%= link_to 'Destroy', matchup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Matchup', new_matchup_path %>

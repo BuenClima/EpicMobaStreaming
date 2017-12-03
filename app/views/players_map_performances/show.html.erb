@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @players_map_performance.player %>
+</p>
+
+<p>
+  <strong>Map:</strong>
+  <%= @players_map_performance.map %>
+</p>
+
+<p>
+  <strong>Win rate:</strong>
+  <%= @players_map_performance.win_rate %>
+</p>
+
+<p>
+  <strong>Loose rate:</strong>
+  <%= @players_map_performance.loose_rate %>
+</p>
+
+<%= link_to 'Edit', edit_players_map_performance_path(@players_map_performance) %> |
+<%= link_to 'Back', players_map_performances_path %>

@@ -1,0 +1,42 @@
+<%= form_with(model: players_pick, local: true) do |form| %>
+  <% if players_pick.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(players_pick.errors.count, "error") %> prohibited this players_pick from being saved:</h2>
+
+      <ul>
+      <% players_pick.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :player_id %>
+    <%= form.text_field :player_id, id: :players_pick_player_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :champion_id %>
+    <%= form.text_field :champion_id, id: :players_pick_champion_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pick_rate %>
+    <%= form.text_field :pick_rate, id: :players_pick_pick_rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :win_rate %>
+    <%= form.text_field :win_rate, id: :players_pick_win_rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kda %>
+    <%= form.text_field :kda, id: :players_pick_kda %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

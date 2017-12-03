@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Players Map Performances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Map</th>
+      <th>Win rate</th>
+      <th>Loose rate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @players_map_performances.each do |players_map_performance| %>
+      <tr>
+        <td><%= players_map_performance.player %></td>
+        <td><%= players_map_performance.map %></td>
+        <td><%= players_map_performance.win_rate %></td>
+        <td><%= players_map_performance.loose_rate %></td>
+        <td><%= link_to 'Show', players_map_performance %></td>
+        <td><%= link_to 'Edit', edit_players_map_performance_path(players_map_performance) %></td>
+        <td><%= link_to 'Destroy', players_map_performance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Players Map Performance', new_players_map_performance_path %>

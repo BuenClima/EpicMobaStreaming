@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  player_id: 1
-  champion_id: 1
+  player: one
+  champion: one
   pick_rate: 1.5
   win_rate: 1.5
   kda: MyString
 
 two:
-  player_id: 1
-  champion_id: 1
+  player: two
+  champion: two
   pick_rate: 1.5
   win_rate: 1.5
   kda: MyString

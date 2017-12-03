@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171203142502) do
+ActiveRecord::Schema.define(version: 20171203161026) do
 
   create_table "champions", force: :cascade do |t|
     t.string "name"
@@ -36,13 +36,19 @@ ActiveRecord::Schema.define(version: 20171203142502) do
     t.index ["game_id"], name: "index_maps_on_game_id"
   end
 
-  create_table "player_performance_maps", force: :cascade do |t|
-    t.integer "player_id"
-    t.integer "map_id"
-    t.float "win_rate"
-    t.float "loose_rate"
+  create_table "matchups", force: :cascade do |t|
+    t.integer "blue_team_id"
+    t.integer "red_team_id"
+    t.integer "winner_id"
+    t.integer "looser_id"
+    t.datetime "date"
+    t.string "rank"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["blue_team_id"], name: "index_matchups_on_blue_team_id"
+    t.index ["looser_id"], name: "index_matchups_on_looser_id"
+    t.index ["red_team_id"], name: "index_matchups_on_red_team_id"
+    t.index ["winner_id"], name: "index_matchups_on_winner_id"
   end
 
   create_table "players", force: :cascade do |t|
@@ -57,6 +63,17 @@ ActiveRecord::Schema.define(version: 20171203142502) do
     t.index ["team_id"], name: "index_players_on_team_id"
   end
 
+  create_table "players_map_performances", force: :cascade do |t|
+    t.integer "player_id"
+    t.integer "map_id"
+    t.float "win_rate"
+    t.float "loose_rate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["map_id"], name: "index_players_map_performances_on_map_id"
+    t.index ["player_id"], name: "index_players_map_performances_on_player_id"
+  end
+
   create_table "players_picks", force: :cascade do |t|
     t.integer "player_id"
     t.integer "champion_id"
@@ -65,6 +82,8 @@ ActiveRecord::Schema.define(version: 20171203142502) do
     t.string "kda"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["champion_id"], name: "index_players_picks_on_champion_id"
+    t.index ["player_id"], name: "index_players_picks_on_player_id"
   end
 
   create_table "teams", force: :cascade do |t|
