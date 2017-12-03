@@ -1,9 +1,9 @@
-class Champion < ApplicationRecord
+class Map < ApplicationRecord
   belongs_to :game
-  has_and_belongs_to_many :players
   validates :name,
             :image,
-            :game_id,
+            :created_at,
+            :updated_at,
             presence: true
   validates_uniqueness_of :name
 end

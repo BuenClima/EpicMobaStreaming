@@ -5,4 +5,5 @@ class Game < ApplicationRecord
             presence: true
   validates_uniqueness_of :name
   has_many :champions
+  has_many :maps
 end
