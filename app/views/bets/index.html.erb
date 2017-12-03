@@ -7,8 +7,8 @@
     <tr>
       <th>Name</th>
       <th>Ratio</th>
-      <th>Matchup</th>
-      <th>Refered</th>
+      <th>Created at</th>
+      <th>Updated at</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,8 +18,8 @@
       <tr>
         <td><%= bet.name %></td>
         <td><%= bet.ratio %></td>
-        <td><%= bet.matchup %></td>
-        <td><%= bet.refered %></td>
+        <td><%= bet.created_at %></td>
+        <td><%= bet.updated_at %></td>
         <td><%= link_to 'Show', bet %></td>
         <td><%= link_to 'Edit', edit_bet_path(bet) %></td>
         <td><%= link_to 'Destroy', bet, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -17,7 +17,7 @@ class BetsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create bet" do
     assert_difference('Bet.count') do
-      post bets_url, params: { bet: { matchup_id: @bet.matchup_id, name: @bet.name, ratio: @bet.ratio, refered: @bet.refered } }
+      post bets_url, params: { bet: { created_at: @bet.created_at, name: @bet.name, ratio: @bet.ratio, updated_at: @bet.updated_at } }
     end
 
     assert_redirected_to bet_url(Bet.last)
@@ -34,7 +34,7 @@ class BetsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update bet" do
-    patch bet_url(@bet), params: { bet: { matchup_id: @bet.matchup_id, name: @bet.name, ratio: @bet.ratio, refered: @bet.refered } }
+    patch bet_url(@bet), params: { bet: { created_at: @bet.created_at, name: @bet.name, ratio: @bet.ratio, updated_at: @bet.updated_at } }
     assert_redirected_to bet_url(@bet)
   end
 
