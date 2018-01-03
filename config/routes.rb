@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :streamers
   resources :statistics
   resources :bets
   resources :tournament_teams

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Streamers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Twitch user</th>
+      <th>Twitch username</th>
+      <th>Twitch channel url</th>
+      <th>Name</th>
+      <th>Lastname</th>
+      <th>Birthday</th>
+      <th>Game</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @streamers.each do |streamer| %>
+      <tr>
+        <td><%= streamer.twitch_user_id %></td>
+        <td><%= streamer.twitch_username %></td>
+        <td><%= streamer.twitch_channel_url %></td>
+        <td><%= streamer.name %></td>
+        <td><%= streamer.lastname %></td>
+        <td><%= streamer.birthday %></td>
+        <td><%= streamer.game %></td>
+        <td><%= streamer.created_at %></td>
+        <td><%= streamer.updated_at %></td>
+        <td><%= link_to 'Show', streamer %></td>
+        <td><%= link_to 'Edit', edit_streamer_path(streamer) %></td>
+        <td><%= link_to 'Destroy', streamer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Streamer', new_streamer_path %>

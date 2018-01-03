@@ -6,4 +6,5 @@ class Game < ApplicationRecord
   validates_uniqueness_of :name
   has_many :champions
   has_many :maps
+  has_many :streamers
 end

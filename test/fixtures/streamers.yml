@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  twitch_user_id: 1
+  twitch_username: MyString
+  twitch_channel_url: MyString
+  name: MyString
+  lastname: MyString
+  birthday: 2018-01-03
+  game: one
+  created_at: 2018-01-03 16:43:12
+  updated_at: 2018-01-03 16:43:12
+
+two:
+  twitch_user_id: 1
+  twitch_username: MyString
+  twitch_channel_url: MyString
+  name: MyString
+  lastname: MyString
+  birthday: 2018-01-03
+  game: two
+  created_at: 2018-01-03 16:43:12
+  updated_at: 2018-01-03 16:43:12

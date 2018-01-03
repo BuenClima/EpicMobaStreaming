@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Twitch user:</strong>
+  <%= @streamer.twitch_user_id %>
+</p>
+
+<p>
+  <strong>Twitch username:</strong>
+  <%= @streamer.twitch_username %>
+</p>
+
+<p>
+  <strong>Twitch channel url:</strong>
+  <%= @streamer.twitch_channel_url %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @streamer.name %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @streamer.lastname %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @streamer.birthday %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @streamer.game %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @streamer.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @streamer.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_streamer_path(@streamer) %> |
+<%= link_to 'Back', streamers_path %>

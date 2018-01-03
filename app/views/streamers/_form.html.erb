@@ -1,0 +1,62 @@
+<%= form_with(model: streamer, local: true) do |form| %>
+  <% if streamer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(streamer.errors.count, "error") %> prohibited this streamer from being saved:</h2>
+
+      <ul>
+      <% streamer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :twitch_user_id %>
+    <%= form.number_field :twitch_user_id, id: :streamer_twitch_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :twitch_username %>
+    <%= form.text_field :twitch_username, id: :streamer_twitch_username %>
+  </div>
+
+  <div class="field">
+    <%= form.label :twitch_channel_url %>
+    <%= form.text_field :twitch_channel_url, id: :streamer_twitch_channel_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :streamer_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastname %>
+    <%= form.text_field :lastname, id: :streamer_lastname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthday %>
+    <%= form.date_select :birthday, id: :streamer_birthday %>
+  </div>
+
+  <div class="field">
+    <%= form.label :game_id %>
+    <%= form.text_field :game_id, id: :streamer_game_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :created_at %>
+    <%= form.datetime_select :created_at, id: :streamer_created_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :updated_at %>
+    <%= form.datetime_select :updated_at, id: :streamer_updated_at %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
