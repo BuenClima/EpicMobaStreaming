@@ -4,20 +4,18 @@ one:
   blue_team: one
   red_team: one
   winner: one
-  loose: one
+  looser: one
   tournament: one
-  time: 2017-12-03 16:39:52
-  rank: MyString
-  create_at: 2017-12-03 16:39:52
-  updated_at: 2017-12-03 16:39:52
+  date: 2018-01-05
+  updated_at: 2018-01-05 12:57:34
+  created_at: 2018-01-05 12:57:34
 
 two:
   blue_team: two
   red_team: two
   winner: two
-  loose: two
+  looser: two
   tournament: two
-  time: 2017-12-03 16:39:52
-  rank: MyString
-  create_at: 2017-12-03 16:39:52
-  updated_at: 2017-12-03 16:39:52
+  date: 2018-01-05
+  updated_at: 2018-01-05 12:57:34
+  created_at: 2018-01-05 12:57:34

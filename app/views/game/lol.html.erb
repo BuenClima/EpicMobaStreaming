@@ -1,0 +1,142 @@
+<div class="container-fluid">
+  <header class="header">
+    <%= image_tag("logo.png",alt: "Logo")%>
+  </header>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header"><%= link_to "Epic Moba Steam", {controller: "home", action: "index"},class:"navbar-brand navbar-link"%>
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"></button>
+          </div>
+          <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav">
+              <li class="active" role="presentation"><%= link_to "Inicio", {controller: "home", action: "index"}%></li>
+              <li role="presentation">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Juegos <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <% @games.each do |game|%>
+                    <% case game.name %>
+                  <% when "League of Legends" %>
+                      <li role="presentation"><%= link_to game.name, {controller: "game",action: "lol"} %></li>
+
+                    <% when "Dota 2" %>
+                      <li role="presentation"><%= link_to game.name, {controller: "game",action: "dota2"} %></li>
+                    <% when "Heroes of the Storm" %>
+                      <li role="presentation"><%= link_to game.name, {controller: "game",action: "hots"} %></li>
+                    <% else %>
+                    <% end %>
+                  <% end %>
+                  <!-- Aquí hay que añadir el link del juego,una de dos o por modelado dela base de datos o haciendo un
+                    game/1 en el cual 1 es id del juego
+                    -->
+                </ul>
+              </li>
+              <li role="presentation"><%= link_to "Contacto", {controller: "home", action: "index"}%> </li>
+              <li role="presentation"><%= link_to "Administración", {controller: "home", action: "index"}%></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="panel-body">
+      <div class="body-content">
+        <div class="body-header">
+          <p class="text-center"><img src="assets/img/lol_logo.png" alt="logo lol"></p>
+        </div>
+        <div class="title"><p class="lead">Torneos</p></div>
+        <div class="separator"></div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class='streamer'>
+              <div class='streamName'>
+                <a class="link" href="tournament.html" target="_self"><p class='lead'>Final LoL 2017 - SKT vs SSG</p></a>
+              </div>
+              <div class='miniature'>
+                <a class="link" href="tournament.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_final_lol.png'></a>
+              </div>
+              <p class='stream-info'><strong>LVPes</strong> con <strong>1,002,234</strong> espectadores</p>
+            </div>
+          </div>
+        </div>
+        <div class="title"><p class="lead">Jugadores profesionales</p></div>
+        <div class="separator"></div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class='streamer'>
+              <div class='streamName'>
+                <a class="link" href="streamer.html" target="_self"><p class='lead'>Road to challanger</p></a>
+              </div>
+              <div class='miniature'>
+                <a href="streamer.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_stray228-320x180.jpg'></a>
+              </div>
+              <p class='stream-info'><strong>imaqtpie</strong> con <strong>441,213</strong> espectadores</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class='streamer'>
+              <div class='streamName'>
+                <a class="link" href="streamer.html" target="_self"><p class='lead'>Jungling tips for bronzas</p></a>
+              </div>
+              <div class='miniature'>
+                <a href="streamer.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_logiiyt-320x180.jpg'></a>
+              </div>
+              <p class='stream-info'><strong>Nightblue3</strong> con <strong>1,213</strong> espectadores</p>
+            </div>
+          </div>
+        </div>
+        <div class="title"><p class="lead">Streamers emergentes</p></div>
+        <div class="separator"></div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class='streamer'>
+              <div class='streamName'>
+                <a class="link" href="streamer.html" target="_self"><p class='lead'>Jugando con suscriptores</p></a>
+              </div>
+              <div class='miniature'>
+                <a class="link" href="streamer.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_logiiyt-320x180.jpg'></a>
+              </div>
+              <p class='stream-info'><strong>Arrozita</strong> con <strong>1,257</strong> espectadores</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class='streamer'>
+              <div class='streamName'>
+                <a class="link" href="streamer.html" target="_self"><p class='lead'>Throwing some games, lol</p></a>
+              </div>
+              <div class='miniature'>
+                <a class="link" href="streamer.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_carritoskami-320x180.jpg'></a>
+              </div>
+              <p class='stream-info'><strong>BuenClima</strong> con <strong>540</strong> espectadores</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class='streamer'>
+              <div class='streamName'>
+                <a class="link" href="streamer.html" target="_self"><p class='lead'>Tanqueando la Top Lane</p></a>
+              </div>
+              <div class='miniature'>
+                <a class="link" href="streamer.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_stray228-320x180.jpg'></a>
+              </div>
+              <p class='stream-info'><strong>Tanqadin</strong> con <strong>14</strong> espectadores</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class='streamer'>
+              <div class='streamName'>
+                <a class="link" href="streamer.html" target="_self"><p class='lead'>Empezando la Seasson en Oro IV</p></a>
+              </div>
+              <div class='miniature'>
+                <a class="link" href="streamer   .html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_carritoskami-320x180.jpg'></a>
+              </div>
+              <p class='stream-info'><strong>JackDar III</strong> con <strong>3</strong> espectadores</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

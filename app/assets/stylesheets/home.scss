@@ -1,0 +1,77 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  padding-left: 30px;
+  padding-right: 30px;
+  background: #E8E8E8; }
+
+.separator {
+  border-bottom: solid 2px black; }
+
+.streamer {
+  padding: 5px;
+  margin-top: 10px;
+  background: #E0E0E0;
+  text-align: center;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  -webkit-transition: all 400ms linear;
+  -moz-transition: all 400ms linear;
+  -ms-transition: all 400ms linear;
+  -o-transition: all 400ms linear;
+  transition: all 400ms linear; }
+
+.streamer:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1); }
+
+.header {
+  background: #FFD488;
+  text-align: center;
+  padding-top: 25px;
+  min-height: 200px;
+  -webkit-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px; }
+
+.stream-info {
+  margin-top: 5px; }
+
+.loadButton {
+  margin-top: 15px; }
+
+.title {
+  margin-top: 20px; }
+
+.crudbtn {
+  margin-left: 5px; }
+
+.message {
+  display: none; }
+
+.liveVideo {
+  height: 50%;
+  width: 70%;
+  float: left; }
+
+.liveChat {
+  margin-left: 10px;
+  float: left; }
+
+.separator2 {
+  clear: both; }
+
+.link:link {
+  color: #F8848F; }
+
+.link:visited {
+  color: #F8848F; }
+
+.link:hover {
+  color: #FFB988; }
+
+.link:active {
+  color: black; }

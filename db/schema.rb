@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180103164312) do
+ActiveRecord::Schema.define(version: 20180105125733) do
 
   create_table "bets", force: :cascade do |t|
     t.string "name"
@@ -50,15 +50,13 @@ ActiveRecord::Schema.define(version: 20180103164312) do
     t.integer "blue_team_id"
     t.integer "red_team_id"
     t.integer "winner_id"
-    t.integer "loose_id"
+    t.integer "looser_id"
     t.integer "tournament_id"
-    t.datetime "time"
-    t.string "rank"
-    t.datetime "create_at"
+    t.date "date"
     t.datetime "updated_at", null: false
     t.datetime "created_at", null: false
     t.index ["blue_team_id"], name: "index_matchups_on_blue_team_id"
-    t.index ["loose_id"], name: "index_matchups_on_loose_id"
+    t.index ["looser_id"], name: "index_matchups_on_looser_id"
     t.index ["red_team_id"], name: "index_matchups_on_red_team_id"
     t.index ["tournament_id"], name: "index_matchups_on_tournament_id"
     t.index ["winner_id"], name: "index_matchups_on_winner_id"

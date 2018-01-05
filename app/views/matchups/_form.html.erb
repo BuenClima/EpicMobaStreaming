@@ -27,8 +27,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :loose_id %>
-    <%= form.text_field :loose_id, id: :matchup_loose_id %>
+    <%= form.label :looser_id %>
+    <%= form.text_field :looser_id, id: :matchup_looser_id %>
   </div>
 
   <div class="field">
@@ -37,23 +37,18 @@
   </div>
 
   <div class="field">
-    <%= form.label :time %>
-    <%= form.datetime_select :time, id: :matchup_time %>
-  </div>
-
-  <div class="field">
-    <%= form.label :rank %>
-    <%= form.text_field :rank, id: :matchup_rank %>
-  </div>
-
-  <div class="field">
-    <%= form.label :create_at %>
-    <%= form.datetime_select :create_at, id: :matchup_create_at %>
+    <%= form.label :date %>
+    <%= form.date_select :date, id: :matchup_date %>
   </div>
 
   <div class="field">
     <%= form.label :updated_at %>
     <%= form.datetime_select :updated_at, id: :matchup_updated_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :created_at %>
+    <%= form.datetime_select :created_at, id: :matchup_created_at %>
   </div>
 
   <div class="actions">
