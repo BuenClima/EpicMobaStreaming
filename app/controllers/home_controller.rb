@@ -107,4 +107,9 @@ class HomeController < ApplicationController
                      "pagination":{"cursor":"eyJiIjpudWxsLCJhIjp7Ik9mZnNldCI6MjB9fQ=="}
     }'
   end
+
+  def contact
+    @games = Game.all
+    render template: 'home/contact'
+  end
 end

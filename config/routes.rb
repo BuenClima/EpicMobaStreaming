@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :users
   get '/api/getStreamers', to: 'home#streamers'
   get '/index', to: 'home#index'
+  get 'contact', to: 'home#contact'
   get '/game/lol', to: 'game#lol'
   get '/game/hots', to: 'game#hots'
   get '/game/dota2', to: 'game#dota2'
