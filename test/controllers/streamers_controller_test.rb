@@ -17,7 +17,7 @@ class StreamersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create streamer" do
     assert_difference('Streamer.count') do
-      post streamers_url, params: { streamer: { birthday: @streamer.birthday, created_at: @streamer.created_at, game_id: @streamer.game_id, lastname: @streamer.lastname, name: @streamer.name, twitch_channel_url: @streamer.twitch_channel_url, twitch_user_id: @streamer.twitch_user_id, twitch_username: @streamer.twitch_username, updated_at: @streamer.updated_at } }
+      post streamers_url, params: { streamer: { created_at: @streamer.created_at, game_id: @streamer.game_id, name: @streamer.name, streamer_type: @streamer.streamer_type, twitch_channel_url: @streamer.twitch_channel_url, twitch_user_id: @streamer.twitch_user_id, twitch_username: @streamer.twitch_username, updated_at: @streamer.updated_at } }
     end
 
     assert_redirected_to streamer_url(Streamer.last)
@@ -34,7 +34,7 @@ class StreamersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update streamer" do
-    patch streamer_url(@streamer), params: { streamer: { birthday: @streamer.birthday, created_at: @streamer.created_at, game_id: @streamer.game_id, lastname: @streamer.lastname, name: @streamer.name, twitch_channel_url: @streamer.twitch_channel_url, twitch_user_id: @streamer.twitch_user_id, twitch_username: @streamer.twitch_username, updated_at: @streamer.updated_at } }
+    patch streamer_url(@streamer), params: { streamer: { created_at: @streamer.created_at, game_id: @streamer.game_id, name: @streamer.name, streamer_type: @streamer.streamer_type, twitch_channel_url: @streamer.twitch_channel_url, twitch_user_id: @streamer.twitch_user_id, twitch_username: @streamer.twitch_username, updated_at: @streamer.updated_at } }
     assert_redirected_to streamer_url(@streamer)
   end
 

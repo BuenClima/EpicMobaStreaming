@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180105125733) do
+ActiveRecord::Schema.define(version: 20180106123916) do
 
   create_table "bets", force: :cascade do |t|
     t.string "name"
@@ -109,13 +109,12 @@ ActiveRecord::Schema.define(version: 20180105125733) do
   end
 
   create_table "streamers", force: :cascade do |t|
-    t.integer "twitch_user_id"
+    t.string "twitch_user_id"
     t.string "twitch_username"
     t.string "twitch_channel_url"
     t.string "name"
-    t.string "lastname"
-    t.date "birthday"
     t.integer "game_id"
+    t.integer "streamer_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["game_id"], name: "index_streamers_on_game_id"

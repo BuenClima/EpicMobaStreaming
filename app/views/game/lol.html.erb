@@ -16,7 +16,7 @@
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Juegos <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                  <% @games.each do |game|%>
+                  <% @items[0].each do |game|%>
                     <% case game.name %>
                   <% when "League of Legends" %>
                       <li role="presentation"><%= link_to game.name, {controller: "game",action: "lol"} %></li>
@@ -47,94 +47,58 @@
         </div>
         <div class="title"><p class="lead">Torneos</p></div>
         <div class="separator"></div>
-        <div class="row">
-          <div class="col-sm-4">
-            <div class='streamer'>
-              <div class='streamName'>
-                <a class="link" href="tournament.html" target="_self"><p class='lead'>Final LoL 2017 - SKT vs SSG</p></a>
+          <div class="row">
+            <% @items[1].each do |item| %>
+            <div class="col-sm-4">
+              <div class='streamer'>
+                <div class='streamName'>
+                  <a class="link" href="tournament.html" target="_self"><p class='lead'><%= item.twitch_username %></p></a>
+                </div>
+                <div class='miniature'>
+                  <a class="link" href="tournament.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_final_lol.png'></a>
+                </div>
+                <p class='stream-info'><strong>LVPes</strong> con <strong>1,002,234</strong> espectadores</p>
+                <p class='stream-info'><strong><%= link_to @items[4][0].red_team.name %></strong> vs<strong><%= link_to @items[4][0].blue_team.name %></strong></p>
               </div>
-              <div class='miniature'>
-                <a class="link" href="tournament.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_final_lol.png'></a>
-              </div>
-              <p class='stream-info'><strong>LVPes</strong> con <strong>1,002,234</strong> espectadores</p>
             </div>
+            <% end %>
           </div>
-        </div>
+
+
         <div class="title"><p class="lead">Jugadores profesionales</p></div>
         <div class="separator"></div>
+
         <div class="row">
-          <div class="col-sm-4">
-            <div class='streamer'>
-              <div class='streamName'>
-                <a class="link" href="streamer.html" target="_self"><p class='lead'>Road to challanger</p></a>
+          <% @items[2].each do |item| %>
+            <div class="col-sm-4">
+              <div class='streamer'>
+                <div class='streamName'>
+                  <a class="link" href="streamer.html" target="_self"><p class='lead'><%= item.twitch_username %></p></a>
+                </div>
+                <div class='miniature'>
+                  <a href="streamer.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_stray228-320x180.jpg'></a>
+                </div>
+                <p class='stream-info'><strong><%= item.twitch_username %></strong> con <strong>441,213</strong> espectadores</p>
               </div>
-              <div class='miniature'>
-                <a href="streamer.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_stray228-320x180.jpg'></a>
-              </div>
-              <p class='stream-info'><strong>imaqtpie</strong> con <strong>441,213</strong> espectadores</p>
             </div>
-          </div>
-          <div class="col-sm-4">
-            <div class='streamer'>
-              <div class='streamName'>
-                <a class="link" href="streamer.html" target="_self"><p class='lead'>Jungling tips for bronzas</p></a>
-              </div>
-              <div class='miniature'>
-                <a href="streamer.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_logiiyt-320x180.jpg'></a>
-              </div>
-              <p class='stream-info'><strong>Nightblue3</strong> con <strong>1,213</strong> espectadores</p>
-            </div>
-          </div>
+          <% end %>
         </div>
         <div class="title"><p class="lead">Streamers emergentes</p></div>
         <div class="separator"></div>
         <div class="row">
-          <div class="col-sm-4">
-            <div class='streamer'>
-              <div class='streamName'>
-                <a class="link" href="streamer.html" target="_self"><p class='lead'>Jugando con suscriptores</p></a>
+          <% @items[3].each do |item| %>
+            <div class="col-sm-4">
+              <div class='streamer'>
+                <div class='streamName'>
+                  <a class="link" href="streamer.html" target="_self"><p class='lead'><%= item.twitch_username %></p></a>
+                </div>
+                <div class='miniature'>
+                  <a class="link" href="streamer.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_logiiyt-320x180.jpg'></a>
+                </div>
+                <p class='stream-info'><strong><%= item.twitch_username %></strong> con <strong>1,257</strong> espectadores</p>
               </div>
-              <div class='miniature'>
-                <a class="link" href="streamer.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_logiiyt-320x180.jpg'></a>
-              </div>
-              <p class='stream-info'><strong>Arrozita</strong> con <strong>1,257</strong> espectadores</p>
             </div>
-          </div>
-          <div class="col-sm-4">
-            <div class='streamer'>
-              <div class='streamName'>
-                <a class="link" href="streamer.html" target="_self"><p class='lead'>Throwing some games, lol</p></a>
-              </div>
-              <div class='miniature'>
-                <a class="link" href="streamer.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_carritoskami-320x180.jpg'></a>
-              </div>
-              <p class='stream-info'><strong>BuenClima</strong> con <strong>540</strong> espectadores</p>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class='streamer'>
-              <div class='streamName'>
-                <a class="link" href="streamer.html" target="_self"><p class='lead'>Tanqueando la Top Lane</p></a>
-              </div>
-              <div class='miniature'>
-                <a class="link" href="streamer.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_stray228-320x180.jpg'></a>
-              </div>
-              <p class='stream-info'><strong>Tanqadin</strong> con <strong>14</strong> espectadores</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4">
-            <div class='streamer'>
-              <div class='streamName'>
-                <a class="link" href="streamer.html" target="_self"><p class='lead'>Empezando la Seasson en Oro IV</p></a>
-              </div>
-              <div class='miniature'>
-                <a class="link" href="streamer   .html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_carritoskami-320x180.jpg'></a>
-              </div>
-              <p class='stream-info'><strong>JackDar III</strong> con <strong>3</strong> espectadores</p>
-            </div>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>
