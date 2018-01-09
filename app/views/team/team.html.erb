@@ -43,59 +43,34 @@
     <div class="panel-body">
       <div class="body-content">
         <div class="body-header">
-          <p class="text-center"><img src="assets/img/lol_logo.png" alt="logo lol"></p>
+          <p class="text-center"><img src="assets/img/lol_logo.png" alt="Logo team"></p>
         </div>
-        <div class="title"><p class="lead">Torneos</p></div>
+        <div class="title"><p class="lead">Team <%= @team.name %></p></div>
         <div class="separator"></div>
-          <div class="row">
-            <% @items[1].each do |item| %>
-            <div class="col-sm-4">
-              <div class='streamer'>
-                <div class='streamName'>
-                  <a class="link" href="tournament.html" target="_self"><p class='lead'><%= item.twitch_username %></p></a>
-                </div>
-                <div class='miniature'>
-                  <a class="link" href="tournament.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_final_lol.png'></a>
-                </div>
-                <p class='stream-info'><strong>LVPes</strong> con <strong>1,002,234</strong> espectadores</p>
-                <p class='stream-info'><strong><%= link_to @items[4][0].red_team.name, { controller: "team", action: "index"}, id: 1 %></strong> vs<strong><%= link_to @items[4][0].blue_team.name %></strong></p>
-              </div>
-            </div>
-            <% end %>
-          </div>
-
-
-        <div class="title"><p class="lead">Jugadores profesionales</p></div>
-        <div class="separator"></div>
-
+        <p class="lead">Explicacion del equipo</p>
         <div class="row">
-          <% @items[2].each do |item| %>
+          <% @player_details.each do |item| %>
             <div class="col-sm-4">
               <div class='streamer'>
                 <div class='streamName'>
-                  <a class="link" href="streamer.html" target="_self"><p class='lead'><%= item.twitch_username %></p></a>
+                  <a class="link" href="tournament.html" target="_self"><p class='lead'><%= link_to item[0].nick,{controller: "players", action: "show"}, id: item[0].id %></p></a>
                 </div>
                 <div class='miniature'>
-                  <a href="streamer.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_stray228-320x180.jpg'></a>
+                  <%= image_tag("logo.png", class: 'img-fluid') %></a>
                 </div>
-                <p class='stream-info'><strong><%= item.twitch_username %></strong> con <strong>441,213</strong> espectadores</p>
-              </div>
-            </div>
-          <% end %>
-        </div>
-        <div class="title"><p class="lead">Streamers emergentes</p></div>
-        <div class="separator"></div>
-        <div class="row">
-          <% @items[3].each do |item| %>
-            <div class="col-sm-4">
-              <div class='streamer'>
-                <div class='streamName'>
-                  <a class="link" href="streamer.html" target="_self"><p class='lead'><%= item.twitch_username %></p></a>
-                </div>
-                <div class='miniature'>
-                  <a class="link" href="streamer.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_logiiyt-320x180.jpg'></a>
-                </div>
-                <p class='stream-info'><strong><%= item.twitch_username %></strong> con <strong>1,257</strong> espectadores</p>
+                <% champions = "" %>
+                <% win_rates= "" %>
+                <% pick_rates= "" %>
+                <% item[1].each do |player_pick| %>
+                  <% champions += player_pick.champion.name+", "%>
+                  <% win_rates += player_pick.win_rate.to_s+", "%>
+                  <% pick_rates += player_pick.pick_rate.to_s+", "%>
+                <% end %>
+                <p class='stream-info'><strong>Nombre </strong><%= item[0].name %><strong> Apellido </strong><%= item[0].lastname %></p>
+                <p class='stream-info'><strong>Campeones </strong>más usados <strong><%= champions.chomp(', ') %></strong></p>
+                <p class='stream-info'><strong>Campeones </strong>más usados <strong><%= champions.chomp(', ') %></strong></p>
+                <p class='stream-info'><strong>Win Rates </strong>con los campeones <strong><%= win_rates.chomp(', ') %></strong></p>
+                <p class='stream-info'><strong>Pick Rates </strong>con los campeones <strong><%= pick_rates.chomp(', ') %></strong></p>
               </div>
             </div>
           <% end %>
@@ -104,3 +79,4 @@
     </div>
   </div>
 </div>
+

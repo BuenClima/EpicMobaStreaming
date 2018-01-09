@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'team/index'
+
+  get 'team/team'
+
   resources :streamers
   resources :matchups
   resources :statistics
@@ -15,6 +19,9 @@ Rails.application.routes.draw do
   resources :users
   get '/api/getStreamers', to: 'home#streamers'
   get '/index', to: 'home#index'
+  get '/team', to: 'team#index'
+  get '/team/:id', to: 'team#team'
+  get '/team/team/:id', to: 'team#team'
   get '/game/lol', to: 'game#lol'
   get '/game/hots', to: 'game#hots'
   get '/game/dota2', to: 'game#dota2'
