@@ -26,6 +26,11 @@
 </p>
 
 <p>
+  <strong>Image:</strong>
+  <%= @streamer.image %>
+</p>
+
+<p>
   <strong>Streamer type:</strong>
   <%= @streamer.streamer_type %>
 </p>
@@ -36,8 +41,8 @@
 </p>
 
 <p>
-  <strong>Updated at:</strong>
-  <%= @streamer.updated_at %>
+  <strong>Update at:</strong>
+  <%= @streamer.update_at %>
 </p>
 
 <%= link_to 'Edit', edit_streamer_path(@streamer) %> |

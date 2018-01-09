@@ -32,6 +32,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :team_description %>
+  </div>
+
+  <div class="field">
     <%= form.label :created_at %>
     <%= form.datetime_select :created_at, id: :team_created_at %>
   </div>

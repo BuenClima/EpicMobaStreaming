@@ -5,6 +5,7 @@ class CreateTeams < ActiveRecord::Migration[5.1]
       t.string :origin
       t.string :coach
       t.string :image
+      t.text :description
       t.datetime :created_at
       t.datetime :updated_at
 

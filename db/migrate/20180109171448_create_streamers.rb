@@ -6,9 +6,10 @@ class CreateStreamers < ActiveRecord::Migration[5.1]
       t.string :twitch_channel_url
       t.string :name
       t.references :game, foreign_key: true
+      t.string :image
       t.integer :streamer_type
       t.datetime :created_at
-      t.datetime :updated_at
+      t.datetime :update_at
 
       t.timestamps
     end

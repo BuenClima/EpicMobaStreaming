@@ -17,11 +17,6 @@
   </div>
 
   <div class="field">
-    <%= form.label :lastname %>
-    <%= form.text_field :lastname, id: :player_lastname %>
-  </div>
-
-  <div class="field">
     <%= form.label :nick %>
     <%= form.text_field :nick, id: :player_nick %>
   </div>
@@ -42,13 +37,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :created_at %>
-    <%= form.datetime_select :created_at, id: :player_created_at %>
+    <%= form.label :biography %>
+    <%= form.text_area :biography, id: :player_biography %>
   </div>
 
   <div class="field">
-    <%= form.label :updated_at %>
-    <%= form.datetime_select :updated_at, id: :player_updated_at %>
+    <%= form.label :position %>
+    <%= form.text_field :position, id: :player_position %>
   </div>
 
   <div class="actions">

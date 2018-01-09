@@ -6,9 +6,10 @@ one:
   twitch_channel_url: MyString
   name: MyString
   game: one
+  image: MyString
   streamer_type: 1
-  created_at: 2018-01-06 12:39:16
-  updated_at: 2018-01-06 12:39:16
+  created_at: 2018-01-09 17:14:48
+  update_at: 2018-01-09 17:14:48
 
 two:
   twitch_user_id: MyString
@@ -16,6 +17,7 @@ two:
   twitch_channel_url: MyString
   name: MyString
   game: two
+  image: MyString
   streamer_type: 1
-  created_at: 2018-01-06 12:39:16
-  updated_at: 2018-01-06 12:39:16
+  created_at: 2018-01-09 17:14:48
+  update_at: 2018-01-09 17:14:48

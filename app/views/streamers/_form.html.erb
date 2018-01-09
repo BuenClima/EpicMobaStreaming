@@ -37,6 +37,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image, id: :streamer_image %>
+  </div>
+
+  <div class="field">
     <%= form.label :streamer_type %>
     <%= form.number_field :streamer_type, id: :streamer_streamer_type %>
   </div>
@@ -47,8 +52,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :updated_at %>
-    <%= form.datetime_select :updated_at, id: :streamer_updated_at %>
+    <%= form.label :update_at %>
+    <%= form.datetime_select :update_at, id: :streamer_update_at %>
   </div>
 
   <div class="actions">
