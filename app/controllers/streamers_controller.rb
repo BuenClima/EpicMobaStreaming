@@ -1,5 +1,6 @@
 class StreamersController < ApplicationController
   before_action :set_streamer, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /streamers
   # GET /streamers.json

@@ -11,8 +11,6 @@ lol = Game.create(name: 'League of Legends', created_at: Time.now.strftime('%d/%
 dota = Game.create(name: 'Dota 2', created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
 hots = Game.create(name: 'Heroes of the Storm', created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
 
-User.create(name: 'Diego', lastname: 'Martin', email: 'algo@algo.com', password: '1235', created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
-User.create(name: 'Ale', lastname: 'Lopez', email: 'algo2@algo.com', password: '1235', created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
 
 skt = Team.create(description: 'SKT TEAM', image: '/null/', name: 'SKT', origin: 'Korea', coach: 'kkOma', created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
 ssb = Team.create(description: 'SSB TEAM', image: '/null/', name: 'SSB', origin: 'Korea', coach: 'DoGGi', created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
@@ -113,3 +111,6 @@ Streamer.create(image: '/null', twitch_user_id: 123451, twitch_username: 'Stream
 Streamer.create(image: '/null', twitch_user_id: 123452, twitch_username: 'Streamer8', twitch_channel_url: 'Canal6', name: 'Algun', streamer_type: 3, game: hots, created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
 Streamer.create(image: '/null', twitch_user_id: 123453, twitch_username: 'Streamer9', twitch_channel_url: 'Canal6', name: 'Algun', streamer_type: 3, game: dota, created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
 Streamer.create(image: '/null', twitch_user_id: 123454, twitch_username: 'Streamer10', twitch_channel_url: 'Canal6', name: 'Algun', streamer_type: 3, game: dota, created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
+
+
+Contact.create(name: 'Diego', email: 'algo@algo.com', gender:'unisex', visitant_type: 'Gamer', message: 'Hey bored?', created_at: Time.now.strftime('%d/%m/%Y %H:%M'))

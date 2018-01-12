@@ -1,5 +1,6 @@
 class MatchupsController < ApplicationController
   before_action :set_matchup, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /matchups
   # GET /matchups.json

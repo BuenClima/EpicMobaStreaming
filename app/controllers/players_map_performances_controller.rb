@@ -1,5 +1,6 @@
 class PlayersMapPerformancesController < ApplicationController
   before_action :set_players_map_performance, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /players_map_performances
   # GET /players_map_performances.json

@@ -1,5 +1,6 @@
 class ChampionsController < ApplicationController
   before_action :set_champion, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /champions
   # GET /champions.json

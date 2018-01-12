@@ -1,0 +1,17 @@
+<p>Hey</p>
+<%= form_tag(controller: 'contact', action: 'new', method: 'get') do %>
+<%= label_tag(:nombre, "Nombe") %>
+<%= text_field_tag(:nombre) %>
+<%= label_tag(:email, "Email") %>
+<%= text_field_tag(:email) %>
+<%= label_tag(:gender, "Gender") %>
+<%= text_field_tag(:gender) %>
+<%= label_tag(:visitant_type, "Visitant type") %>
+<%= text_field_tag(:visitant_type) %>
+<%= label_tag(:message, "Message") %>
+<%= text_field_tag(:message) %>
+<%= submit_tag("Contact") %>
+<% end %>
+
+<%= form_for @contact do |f|%>
+<% end %>
