@@ -11,9 +11,9 @@
           </div>
           <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav">
-              <li class="active" role="presentation"><%= link_to "Inicio", {controller: "home", action: "index"}%></li>
+              <li  role="presentation"><%= link_to "Inicio", {controller: "home", action: "index"}%></li>
               <li role="presentation">
-              <li class="dropdown">
+              <li class="active" class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Juegos <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                   <% @items[0].each do |game|%>
@@ -24,13 +24,10 @@
                     <% when "Dota 2" %>
                       <li role="presentation"><%= link_to game.name, {controller: "game",action: "dota2"} %></li>
                     <% when "Heroes of the Storm" %>
-                      <li role="presentation"><%= link_to game.name, {controller: "game",action: "hots"} %></li>
+                      <li class="active" role="presentation"><%= link_to game.name, {controller: "game",action: "hots"} %></li>
                     <% else %>
                     <% end %>
                   <% end %>
-                  <!-- Aquí hay que añadir el link del juego,una de dos o por modelado dela base de datos o haciendo un
-                    game/1 en el cual 1 es id del juego
-                    -->
                 </ul>
               </li>
               <li role="presentation"><%= link_to "Contacto", {controller: "home", action: "index"}%> </li>

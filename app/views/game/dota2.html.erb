@@ -11,9 +11,9 @@
           </div>
           <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav">
-              <li class="active" role="presentation"><%= link_to "Inicio", {controller: "home", action: "index"}%></li>
+              <li role="presentation"><%= link_to "Inicio", {controller: "home", action: "index"}%></li>
               <li role="presentation">
-              <li class="dropdown">
+              <li class="active" class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Juegos <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                   <% @items[0].each do |game|%>
@@ -22,15 +22,12 @@
                       <li role="presentation"><%= link_to game.name, {controller: "game",action: "lol"} %></li>
 
                     <% when "Dota 2" %>
-                      <li role="presentation"><%= link_to game.name, {controller: "game",action: "dota2"} %></li>
+                      <li class="active" role="presentation"><%= link_to game.name, {controller: "game",action: "dota2"} %></li>
                     <% when "Heroes of the Storm" %>
                       <li role="presentation"><%= link_to game.name, {controller: "game",action: "hots"} %></li>
                     <% else %>
                     <% end %>
                   <% end %>
-                  <!-- Aquí hay que añadir el link del juego,una de dos o por modelado dela base de datos o haciendo un
-                    game/1 en el cual 1 es id del juego
-                    -->
                 </ul>
               </li>
               <li role="presentation"><%= link_to "Contacto", {controller: "home", action: "index"}%> </li>
@@ -43,8 +40,10 @@
     <div class="panel-body">
       <div class="body-content">
         <div class="body-header">
-          <p class="text-center"><img src="assets/img/lol_logo.png" alt="logo dota2"></p>
+          <p class="text-center"><%= image_tag('dota2_logo.png', class: 'img-fluid', alt: 'logo hots') %></p>
         </div>
+
+        <% if @items[1].length > 0 %>
         <div class="title"><p class="lead">Torneos</p></div>
         <div class="separator"></div>
         <div class="row">
@@ -55,7 +54,7 @@
                   <a class="link" href="tournament.html" target="_self"><p class='lead'><%= item.twitch_username %></p></a>
                 </div>
                 <div class='miniature'>
-                  <a class="link" href="tournament.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_final_lol.png'></a>
+                  <a class="link" href="tournament.html" target="_self"><%= image_tag(item.image, class: 'img-fluid', alt: 'miniatura') %></a>
                 </div>
                 <p class='stream-info'><strong>LVPes</strong> con <strong>1,002,234</strong> espectadores</p>
                 <p class='stream-info'><strong><%= link_to @items[4][0].red_team.name %></strong> vs<strong><%= link_to @items[4][0].blue_team.name %></strong></p>
@@ -63,11 +62,11 @@
             </div>
           <% end %>
         </div>
+        <% end %>
 
-
+        <% if @items[2].length > 0 %>
         <div class="title"><p class="lead">Jugadores profesionales</p></div>
         <div class="separator"></div>
-
         <div class="row">
           <% @items[2].each do |item| %>
             <div class="col-sm-4">
@@ -76,13 +75,16 @@
                   <a class="link" href="streamer.html" target="_self"><p class='lead'><%= item.twitch_username %></p></a>
                 </div>
                 <div class='miniature'>
-                  <a href="streamer.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_stray228-320x180.jpg'></a>
+                  <a href="streamer.html" target="_self"><%= image_tag(item.image, class: 'img-fluid', alt: 'miniatura') %></a>
                 </div>
                 <p class='stream-info'><strong><%= item.twitch_username %></strong> con <strong>441,213</strong> espectadores</p>
               </div>
             </div>
           <% end %>
         </div>
+        <% end %>
+
+        <% if @items[3].length > 0 %>
         <div class="title"><p class="lead">Streamers emergentes</p></div>
         <div class="separator"></div>
         <div class="row">
@@ -93,13 +95,14 @@
                   <a class="link" href="streamer.html" target="_self"><p class='lead'><%= item.twitch_username %></p></a>
                 </div>
                 <div class='miniature'>
-                  <a class="link" href="streamer.html" target="_self"><img class='img-fluid' alt='miniatura' src='assets/img/live_user_logiiyt-320x180.jpg'></a>
+                  <a class="link" href="streamer.html" target="_self"><%= image_tag(item.image, class: 'img-fluid', alt: 'miniatura') %></a>
                 </div>
                 <p class='stream-info'><strong><%= item.twitch_username %></strong> con <strong>1,257</strong> espectadores</p>
               </div>
             </div>
           <% end %>
         </div>
+        <% end %>
       </div>
     </div>
   </div>

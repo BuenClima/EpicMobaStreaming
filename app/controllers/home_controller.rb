@@ -17,7 +17,7 @@ class HomeController < ApplicationController
                                  "viewer_count":150,
                                  "started_at":"2017-08-14T16:08:32Z",
                                  "language":"en",
-                                 "thumbnail_url":"/assets/images/live_user_carritoskami-320x180.jpg"
+                                 "thumbnail_url":"live_user_carritoskami-320x180.jpg"
                              },
                              {
                                  "id":1,
@@ -29,7 +29,7 @@ class HomeController < ApplicationController
                                  "viewer_count":100,
                                  "started_at":"2017-08-14T16:08:32Z",
                                  "language":"en",
-                                 "thumbnail_url":"assets/img/live_user_logiiyt-320x180.jpg"
+                                 "thumbnail_url":"live_user_logiiyt-320x180.jpg"
                              },
                              {
                                  "id":2,
@@ -41,7 +41,7 @@ class HomeController < ApplicationController
                                  "viewer_count":80,
                                  "started_at":"2017-08-14T16:08:32Z",
                                  "language":"en",
-                                 "thumbnail_url":"assets/img/live_user_stray228-320x180.jpg"
+                                 "thumbnail_url":"live_user_stray228-320x180.jpg"
                              },
                              {
                                  "id":3,
@@ -53,7 +53,7 @@ class HomeController < ApplicationController
                                  "viewer_count":50,
                                  "started_at":"2017-08-14T16:08:32Z",
                                  "language":"en",
-                                 "thumbnail_url":"assets/img/live_user_carritoskami-320x180.jpg"
+                                 "thumbnail_url":"live_user_carritoskami-320x180.jpg"
                              },
                              {
                                  "id":4,
@@ -65,7 +65,7 @@ class HomeController < ApplicationController
                                  "viewer_count":50,
                                  "started_at":"2017-08-14T16:08:32Z",
                                  "language":"en",
-                                 "thumbnail_url":"assets/img/live_user_logiiyt-320x180.jpg"
+                                 "thumbnail_url":"live_user_logiiyt-320x180.jpg"
                              },
                              {
                                  "id":5,
@@ -77,7 +77,7 @@ class HomeController < ApplicationController
                                  "viewer_count":40,
                                  "started_at":"2017-08-14T16:08:32Z",
                                  "language":"en",
-                                 "thumbnail_url":"assets/img/live_user_stray228-320x180.jpg"
+                                 "thumbnail_url":"live_user_stray228-320x180.jpg"
                              },
                              {
                                  "id":6,
@@ -89,7 +89,7 @@ class HomeController < ApplicationController
                                  "viewer_count":50,
                                  "started_at":"2017-08-14T16:08:32Z",
                                  "language":"en",
-                                 "thumbnail_url":"assets/img/live_user_carritoskami-320x180.jpg"
+                                 "thumbnail_url":"live_user_carritoskami-320x180.jpg"
                              },
                              {
                                  "id":7,
@@ -101,7 +101,7 @@ class HomeController < ApplicationController
                                  "viewer_count":50,
                                  "started_at":"2017-08-14T16:08:32Z",
                                  "language":"en",
-                                 "thumbnail_url":"assets/img/live_user_logiiyt-320x180.jpg"
+                                 "thumbnail_url":"live_user_logiiyt-320x180.jpg"
                              }
                          ],
                      "pagination":{"cursor":"eyJiIjpudWxsLCJhIjp7Ik9mZnNldCI6MjB9fQ=="}
