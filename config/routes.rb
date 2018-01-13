@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :contacts
+  get 'contact/index'
+
+  get 'contact/sent'
+  post 'contact/sent'
   get 'player/player'
 
   resources :teams

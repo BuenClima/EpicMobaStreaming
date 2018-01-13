@@ -1,102 +1,55 @@
-<div class="container-fluid">
-  <header class="header">
-    <img src="assets/img/logo.png" alt="logo">
-  </header>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header"><a class="navbar-brand navbar-link" href="index.html">Epic Moba Steam</a>
-            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"></button>
-          </div>
-          <div class="collapse navbar-collapse" id="navcol-1">
-            <ul class="nav navbar-nav">
-              <li role="presentation"><a href="index.html">Inicio </a></li>
-              <li role="presentation">
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Juegos <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li role="presentation"><a href="lol.html">League of Legends</a></li>
-                  <li role="presentation"><a href="dota2.html">Dota 2</a></li>
-                  <li role="presentation"><a href="hots.html">Heroes of Storm</a></li>
-                </ul>
-              </li>
-              </li>
-              <li role="presentation"><a href="contact.html">Contacto </a></li>
-              <li role="presentation"><a href="admin.html">Administración </a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+<div class="body-header text-center">
+  <div class="row">
+    <div class="col-md-6">
+      <p class="lead">
+        <%= image_tag(@player.image, alt: 'foto player', class: 'img-circle', height: '60') %><strong><%= @player.name%></strong>
+      </p>
     </div>
-    <div class="panel-body">
-      <div class="body-content">
-        <div class="body-header text-center">
-          <div class="row">
-            <div class="col-md-6">
-              <p class="lead"><img height="60" class="img-circle" src="assets/img/fotos/faker.png" alt="foto faker">Sanghyeok "<strong>Faker</strong>" Lee</p>
-            </div>
-            <div class="col-md-6">
-              <p class="lead"><strong>Equipo:</strong> SK Telekom 1 <a href="teamProfile.html" target="_self"><img height="60" src="assets/img/skt1.png" alt="logo skt1"></a></p>
-            </div>
-          </div>
-        </div>
-        <div class="separator"></div>
-        <br>
-        <p class="lead"><strong>Biografía</strong></p>
-        <p>Faker, as it turns out, is not unbeatable. After finally falling at Worlds 2017, everyone watched as the famed mid laner crumbled into devastation. But his legend is still strong, -- and it’s hard to dispute how strong his individual performances were throughout Worlds. He is the star even among a host of stars as he returns yet again for another All-Star Event.</p>
-        <br>
-        <p class="lead"><span class="titulillo">Información del jugador</span></p>
-        <br>
-        <div class="row">
-          <div class="col-md-3">
-            <p class="lead">Mid laner</p>
-          </div>
-          <div class="col-md-3">
-            <p class="lead">KDA Ratio: 3.7</p>
-          </div>
-          <div class="col-md-3">
-            <p class="lead">CS Per Min: 9.4</p>
-          </div>
-          <div class="col-md-3">
-            <p class="lead">Kill Participation: 79%</p>
-          </div>
-        </div>
-        <br>
-        <p class="lead">Campeones más jugados</p>
-        <table class="table">
-          <thead>
-          <th></th>
-          <th>Campeón</th>
-          <th>Jugado</th>
-          <th>Win - Loss</th>
-          <th>KDA Ratio</th>
-          </thead>
-          <tbody>
-          <tr>
-            <td><img width="80" class="img-circle" src="assets/img/fotos/Galio.png" alt="campeon"></td>
-            <td>Galio</td>
-            <td>6 veces</td>
-            <td>4 - 2</td>
-            <td>5.4</td>
-          </tr>
-          <tr>
-            <td><img width="80" class="img-circle" src="assets/img/fotos/Taliyah.png" alt="campeon"></td>
-            <td>Taliyah</td>
-            <td>2 veces</td>
-            <td>1 - 1</td>
-            <td>3.5</td>
-          </tr>
-          <tr>
-            <td><img width="80" class="img-circle" src="assets/img/fotos/Cassiopeia.png" alt="campeon"></td>
-            <td>Cassiopeia</td>
-            <td>2 veces</td>
-            <td>1 - 1</td>
-            <td>2.8</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="col-md-6">
+      <p class="lead"><strong>Equipo:</strong> <%= link_to(image_tag(@player.team.image, alt: 'foto equipo', height: '60'), {controller: 'team', action: 'team', id: @player.team.id}) %></p>
     </div>
   </div>
 </div>
+<div class="separator"></div>
+<br>
+<p class="lead"><strong>Biografía</strong></p>
+<p><%= @player.biography %></p>
+<br>
+<p class="lead"><span class="titulillo">Información del jugador</span></p>
+<br>
+<div class="row">
+  <div class="col-md-3">
+    <p class="lead">Posición: <%= @player.position %></p>
+  </div>
+  <div class="col-md-3">
+    <p class="lead">KDA Ratio: <%= @kdaRatio %></p>
+  </div>
+  <div class="col-md-3">
+    <p class="lead">CS Per Min: <%= @csPerMin %></p>
+  </div>
+  <div class="col-md-3">
+    <p class="lead">Kill Participation: <%= @killParticipation %></p>
+  </div>
+</div>
+<br>
+<p class="lead">Campeones más jugados</p>
+<table class="table">
+  <thead>
+  <th></th>
+  <th>Campeón</th>
+  <th>Winrate</th>
+  <th>Pickrate</th>
+  <th>KDA</th>
+  </thead>
+  <tbody>
+  <% @playerPick.each do |each| %>
+    <tr>
+      <td><%= image_tag(each.champion.image, width: '80', class: 'img-circle', alt: 'campeon') %></td>
+      <td><%= each.champion.name %></td>
+      <td><%= each.win_rate %></td>
+      <td><%= each.pick_rate %></td>
+      <td><%= each.kda %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

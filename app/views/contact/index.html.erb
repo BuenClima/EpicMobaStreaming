@@ -1,0 +1,25 @@
+<p class="lead">Formulario de contacto</p>
+<%= form_tag({controller: 'contact', action: 'sent'}, method: 'post', id: 'form') do %>
+  <div class="feedbackmessage" role="alert"></div>
+  <div class="form-group">
+    <label for="inputName">Canal de twitch.tv</label>
+    <%= text_field_tag 'twitchChannel', nil, placeholder: 'Canal de twitch', class: 'form-control'%>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail">Email de Contacto</label>
+    <%= email_field_tag 'email', nil, { placeholder: 'email', class: 'form-control', "aria-describedby" => "emailHelp"}%>
+  </div>
+  <div class="form-group">
+    <label for="inputText">Mensaje</label>
+    <%= text_area_tag 'message', nil, {class: 'formTextArea form-control', form: 'form'} %>
+  </div>
+  <div class="form-group">
+    <label for="inputText">Género</label>
+    <p><label><%= radio_button_tag 'gender', 'male' %>Chico</label> <label><%= radio_button_tag 'gender', 'female' %>Chica</label></p>
+  </div>
+  <div class="form-group">
+    <label for="inputText">Fecha a empezar a hacer streaming (dia/mes/año hora:minuto)</label>
+    <p><%= text_field_tag 'dateToPlay', Time.now.strftime('%d/%m/%Y %H:%M'), class: 'form-control' %></p>
+  </div>
+  <%= submit_tag('Contactar', class: 'btn btn-md btn-primary') %>
+<% end %>
