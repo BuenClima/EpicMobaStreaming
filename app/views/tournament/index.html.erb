@@ -1,0 +1,45 @@
+<p class="lead"><%= @tournament.name %></p>
+<p class='stream-info'><strong><%= @tournament.name %> </strong> con <strong>1,785,891</strong> espectadores</p>
+<div class="row">
+  <div class="col-md-8">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe width="854" height="480" src="https://www.youtube.com/embed/Dpr-6Ry5jmw" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="betPanel">
+      <p class="lead">Tabla de estadísticas</p>
+      <table class="table">
+        <thead>
+        <th>Dato</th>
+        <th>Resultado</th>
+        </thead>
+        <tbody>
+        <% @stats.each do |stat| %>
+          <tr>
+            <td><%= stat.name %></td>
+            <td><%= stat.ratio %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <p class="lead">Tabla de apuestas</p>
+      <table class="table">
+        <thead>
+        <th>Apuesta</th>
+        <th>Ratio</th>
+        <th>Enlace</th>
+        </thead>
+        <tbody>
+        <% @bets.each do |bet| %>
+          <tr>
+            <td><%= bet.name %></td>
+            <td><%= bet.ratio %></td>
+            <td><%= link_to 'Referido', bet.refered %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

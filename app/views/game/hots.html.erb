@@ -10,12 +10,12 @@
     <div class="col-sm-4">
       <div class='streamer'>
         <div class='streamName'>
-          <a class="link" href="tournament.html" target="_self"><p class='lead'><%= item.twitch_username %></p></a>
+          <p class="lead"><%= link_to item.twitch_username, {controller: 'tournament', action: 'index'}, class: 'link' %></p>
         </div>
         <div class='miniature'>
-          <a class="link" href="tournament.html" target="_self"><%= image_tag(item.image, class: 'img-fluid', alt: 'miniatura') %></a>
+          <%= link_to image_tag(item.image, class: 'img-fluid', alt: 'miniatura'), {controller: 'tournament', action: 'index'}, class: 'link' %>
         </div>
-        <p class='stream-info'><strong>LVPes</strong> con <strong>1,002,234</strong> espectadores</p>
+        <p class='stream-info'><strong><%= item.twitch_username %></strong> con <strong>1,002,234</strong> espectadores</p>
         <p class='stream-info'><strong><%= link_to @items[4][0].red_team.name %></strong> vs<strong><%= link_to @items[4][0].blue_team.name %></strong></p>
       </div>
     </div>
@@ -31,10 +31,10 @@
     <div class="col-sm-4">
       <div class='streamer'>
         <div class='streamName'>
-          <a class="link" href="streamer.html" target="_self"><p class='lead'><%= item.twitch_username %></p></a>
+          <p class="lead"><%= link_to item.twitch_username, {controller: 'streamer', action: 'index'}, class: 'link' %></p>
         </div>
         <div class='miniature'>
-          <a href="streamer.html" target="_self"><%= image_tag(item.image, class: 'img-fluid', alt: 'miniatura') %></a>
+          <%= link_to image_tag(item.image, class: 'img-fluid', alt: 'miniatura'), {controller: 'streamer', action: 'index'}, class: 'link' %>
         </div>
         <p class='stream-info'><strong><%= item.twitch_username %></strong> con <strong>441,213</strong> espectadores</p>
       </div>
@@ -51,10 +51,10 @@
     <div class="col-sm-4">
       <div class='streamer'>
         <div class='streamName'>
-          <a class="link" href="streamer.html" target="_self"><p class='lead'><%= item.twitch_username %></p></a>
+          <p class="lead"><%= link_to item.twitch_username, {controller: 'streamer', action: 'index'}, class: 'link' %></p>
         </div>
         <div class='miniature'>
-          <a class="link" href="streamer.html" target="_self"><%= image_tag(item.image, class: 'img-fluid', alt: 'miniatura') %></a>
+          <%= link_to image_tag(item.image, class: 'img-fluid', alt: 'miniatura'), {controller: 'streamer', action: 'index'}, class: 'link' %>
         </div>
         <p class='stream-info'><strong><%= item.twitch_username %></strong> con <strong>1,257</strong> espectadores</p>
       </div>

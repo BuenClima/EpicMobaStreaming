@@ -8,32 +8,8 @@ class HomeController < ApplicationController
   def streamers
     render json: '{"data":
                          [
-                             {
+                            {
                                  "id":0,
-                                 "user_id":"23161357",
-                                 "game_id":"417752",
-                                 "user_name": "Juanchiman",
-                                 "type":"live",
-                                 "title":"Panchangueos en liga diamante 1",
-                                 "viewer_count":150,
-                                 "started_at":"2017-08-14T16:08:32Z",
-                                 "language":"en",
-                                 "thumbnail_url":"live_user_carritoskami-320x180.jpg"
-                             },
-                             {
-                                 "id":1,
-                                 "user_id":"23161357",
-                                 "game_id":"417752",
-                                 "user_name": "xPeke",
-                                 "type":"live",
-                                 "title":"Hoy toca enseñar a farmear en mid",
-                                 "viewer_count":100,
-                                 "started_at":"2017-08-14T16:08:32Z",
-                                 "language":"en",
-                                 "thumbnail_url":"live_user_logiiyt-320x180.jpg"
-                             },
-                             {
-                                 "id":2,
                                  "user_id":"23161357",
                                  "game_id":"417752",
                                  "user_name": "OGN Live",
@@ -42,8 +18,36 @@ class HomeController < ApplicationController
                                  "viewer_count":80,
                                  "started_at":"2017-08-14T16:08:32Z",
                                  "language":"en",
-                                 "thumbnail_url":"live_user_stray228-320x180.jpg"
+                                 "thumbnail_url":"live_final_lol.png",
+                                 "url":"tournament/index"
                              },
+                             {
+                                 "id":1,
+                                 "user_id":"23161357",
+                                 "game_id":"417752",
+                                 "user_name": "Juanchiman",
+                                 "type":"live",
+                                 "title":"Panchangueos en liga diamante 1",
+                                 "viewer_count":150,
+                                 "started_at":"2017-08-14T16:08:32Z",
+                                 "language":"en",
+                                 "thumbnail_url":"live_user_carritoskami-320x180.jpg",
+                                 "url":"streamer/index"
+                             },
+                             {
+                                 "id":2,
+                                 "user_id":"23161357",
+                                 "game_id":"417752",
+                                 "user_name": "xPeke",
+                                 "type":"live",
+                                 "title":"Hoy toca enseñar a farmear en mid",
+                                 "viewer_count":100,
+                                 "started_at":"2017-08-14T16:08:32Z",
+                                 "language":"en",
+                                 "thumbnail_url":"live_user_logiiyt-320x180.jpg",
+                                 "url":"streamer/index"
+                             },
+
                              {
                                  "id":3,
                                  "user_id":"23161357",
@@ -54,7 +58,8 @@ class HomeController < ApplicationController
                                  "viewer_count":50,
                                  "started_at":"2017-08-14T16:08:32Z",
                                  "language":"en",
-                                 "thumbnail_url":"live_user_carritoskami-320x180.jpg"
+                                 "thumbnail_url":"live_user_carritoskami-320x180.jpg",
+                                 "url":"streamer/index"
                              },
                              {
                                  "id":4,
@@ -66,7 +71,8 @@ class HomeController < ApplicationController
                                  "viewer_count":50,
                                  "started_at":"2017-08-14T16:08:32Z",
                                  "language":"en",
-                                 "thumbnail_url":"live_user_logiiyt-320x180.jpg"
+                                 "thumbnail_url":"live_user_logiiyt-320x180.jpg",
+                                 "url":"streamer/index"
                              },
                              {
                                  "id":5,
@@ -78,7 +84,8 @@ class HomeController < ApplicationController
                                  "viewer_count":40,
                                  "started_at":"2017-08-14T16:08:32Z",
                                  "language":"en",
-                                 "thumbnail_url":"live_user_stray228-320x180.jpg"
+                                 "thumbnail_url":"live_user_stray228-320x180.jpg",
+                                 "url":"streamer/index"
                              },
                              {
                                  "id":6,
@@ -90,7 +97,8 @@ class HomeController < ApplicationController
                                  "viewer_count":50,
                                  "started_at":"2017-08-14T16:08:32Z",
                                  "language":"en",
-                                 "thumbnail_url":"live_user_carritoskami-320x180.jpg"
+                                 "thumbnail_url":"live_user_carritoskami-320x180.jpg",
+                                 "url":"streamer/index"
                              },
                              {
                                  "id":7,
@@ -102,7 +110,8 @@ class HomeController < ApplicationController
                                  "viewer_count":50,
                                  "started_at":"2017-08-14T16:08:32Z",
                                  "language":"en",
-                                 "thumbnail_url":"live_user_logiiyt-320x180.jpg"
+                                 "thumbnail_url":"live_user_logiiyt-320x180.jpg",
+                                 "url":"streamer/index"
                              }
                          ],
                      "pagination":{"cursor":"eyJiIjpudWxsLCJhIjp7Ik9mZnNldCI6MjB9fQ=="}

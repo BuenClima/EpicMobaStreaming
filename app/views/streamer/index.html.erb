@@ -1,0 +1,19 @@
+<p class="lead"><%= @streamer.name %></p>
+<p class='stream-info'><strong><%= @streamer.name %> </strong> con <strong>1,785,891</strong> espectadores</p>
+<div>
+  <div class="liveVideo">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="http://player.twitch.tv/?channel=imaqtpie"></iframe>
+    </div>
+  </div>
+  <div class="liveChat">
+    <iframe class="embed-responsive-item"
+            frameborder="0"
+            scrolling="no"
+            id="chat_embed"
+            src="http://www.twitch.tv/imaqtpie/chat"
+            height="500px">
+    </iframe>
+  </div>
+  <div class="separator2"></div>
+</div>

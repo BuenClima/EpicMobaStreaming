@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'streamer/index'
+
+  get 'tournament/index'
+
   resources :contacts
   get 'contact/index'
 
