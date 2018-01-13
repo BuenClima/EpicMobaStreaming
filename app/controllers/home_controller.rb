@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
     @games = Game.all
+    @tournaments = Tournament.all
   end
 
   # @return [Streamers]

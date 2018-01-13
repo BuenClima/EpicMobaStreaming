@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  get 'player/player'
+
   resources :teams
   resources :players
   resources :streamers
   get 'team/index'
 
   get 'team/team'
+  get 'player/player'
 
   resources :matchups
   resources :statistics
@@ -25,6 +28,7 @@ Rails.application.routes.draw do
   get '/game/lol', to: 'game#lol'
   get '/game/hots', to: 'game#hots'
   get '/game/dota2', to: 'game#dota2'
+  get '/player/:id', to: 'player#player'
   root to: "home#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
