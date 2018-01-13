@@ -1,17 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  twitchChannel: MyString
   email: MyString
-  gender: MyString
-  visitant_type: MyString
   message: MyText
-  created_at: 2018-01-09 17:34:20
+  gender: 1
+  dateToPlay: 2018-01-13 01:20:06
 
 two:
-  name: MyString
+  twitchChannel: MyString
   email: MyString
-  gender: MyString
-  visitant_type: MyString
   message: MyText
-  created_at: 2018-01-09 17:34:20
+  gender: 1
+  dateToPlay: 2018-01-13 01:20:06

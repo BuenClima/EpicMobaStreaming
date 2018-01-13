@@ -5,12 +5,11 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Twitchchannel</th>
       <th>Email</th>
-      <th>Gender</th>
-      <th>Visitant type</th>
       <th>Message</th>
-      <th>Created at</th>
+      <th>Gender</th>
+      <th>Datetoplay</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,12 +17,11 @@
   <tbody>
     <% @contacts.each do |contact| %>
       <tr>
-        <td><%= contact.name %></td>
+        <td><%= contact.twitchChannel %></td>
         <td><%= contact.email %></td>
-        <td><%= contact.gender %></td>
-        <td><%= contact.visitant_type %></td>
         <td><%= contact.message %></td>
-        <td><%= contact.created_at %></td>
+        <td><%= contact.gender %></td>
+        <td><%= contact.dateToPlay %></td>
         <td><%= link_to 'Show', contact %></td>
         <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
         <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>

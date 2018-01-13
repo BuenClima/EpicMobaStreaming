@@ -14,10 +14,10 @@ function loadFirstStreamers() {
             column.addClass('col-sm-4');
             column.append("<div class='streamer'>" +
                             "<div class='streamName'>" +
-                                "<a class='link' href='streamer.html' target='_self'><p class='lead'>" + element.title + "</p></a>" +
+                                "<a class='link' href='" + element.url + "' target='_self'><p class='lead'>" + element.title + "</p></a>" +
                             "</div>" +
                             "<div class='miniature'>" +
-                                "<a class='link' href='streamer.html' target='_self'><img class='img-fluid' alt='miniatura' src='" + element.thumbnail_url + "'></a>" +
+                                "<a class='link' href='" + element.url + "' target='_self'><img class='img-fluid' alt='miniatura' src='" + element.thumbnail_url + "'></a>" +
                             "</div>" +
                             "<p class='stream-info'><strong>" + element.user_name + "</strong> con <strong>" + element.viewer_count + "</strong> espectadores</p>" +
                            "</div>");
@@ -43,10 +43,10 @@ function loadMoreStreamers() {
                 column.addClass('col-sm-4');
                 column.append("<div class='streamer'>" +
                                 "<div class='streamName'>" +
-                                    "<a class='link' href='streamer.html' target='_self'><p class='lead'>" + element.title + "</p></a>" +
+                                    "<a class='link' href='" + element.url + "' target='_self'><p class='lead'>" + element.title + "</p></a>" +
                                 "</div>" +
                                 "<div class='miniature'>" +
-                                    "<a class='link' href='streamer.html' target='_self'><img class='img-fluid' alt='miniatura' src='" + element.thumbnail_url + "'></a>" +
+                                    "<a class='link' href='" + element.url + "' target='_self'><img class='img-fluid' alt='miniatura' src='" + element.thumbnail_url + "'></a>" +
                                 "</div>" +
                                 "<p class='stream-info'><strong>" + element.user_name + "</strong> con <strong>" + element.viewer_count + "</strong> espectadores</p>" +
                                "</div>");
