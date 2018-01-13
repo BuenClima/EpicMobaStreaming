@@ -1,23 +1,22 @@
 Rails.application.routes.draw do
+  devise_for :users
+
   get 'streamer/index'
-
+  get 'admin/login'
+  get 'admin/menu'
   get 'tournament/index'
-
-  resources :contacts
   get 'contact/index'
-
   get 'contact/sent'
   post 'contact/sent'
   get 'player/player'
-
-  resources :teams
-  resources :players
-  resources :streamers
   get 'team/index'
-
   get 'team/team'
   get 'player/player'
 
+  resources :contacts
+  resources :teams
+  resources :players
+  resources :streamers
   resources :matchups
   resources :statistics
   resources :bets
@@ -29,7 +28,9 @@ Rails.application.routes.draw do
   resources :champions
   resources :games
   resources :users
+
   get '/api/getStreamers', to: 'home#streamers'
+  get '/api/getStreamersBy/:id', to: 'home#streamerbyid'
   get '/index', to: 'home#index'
   get '/team', to: 'team#index'
   get '/team/:id', to: 'team#team'

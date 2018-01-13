@@ -10,7 +10,6 @@
     <%= javascript_include_tag 'bootstrap.min'%>
     <%= javascript_include_tag 'jquery.min'%>
   </head>
-
   <body>
   <% @games = Game.all %>
   <div class="container-fluid">
@@ -45,7 +44,7 @@
                   </ul>
                 </li>
                 <li role="presentation"><%= link_to "Contacto", {controller: "contact", action: "index"}%></li>
-                <li role="presentation"><%= link_to "Administración", {controller: "home", action: "index"}%></li>
+                <li role="presentation"><%= link_to "Administración", {controller: "admin", action: "menu"}%></li>
               </ul>
             </div>
           </div>
@@ -53,6 +52,8 @@
       </div>
       <div class="panel-body">
         <div class="body-content">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
           <%= yield %>
         </div>
       </div>
