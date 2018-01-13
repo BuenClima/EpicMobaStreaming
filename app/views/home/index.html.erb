@@ -30,13 +30,13 @@
 </div>
 <div class="title row">
   <div class="col-lg-3 col-lg-offset-2">
-    <p class="lead"><%= link_to TournamentTeam.where('tournament_id'=>tournament).all[0].team.name, { controller: "team", action: "team", id: TournamentTeam.where('tournament_id'=>tournament).all[0].team}, class: 'link' %><%= image_tag(TournamentTeam.where('tournament_id'=>tournament).all[0].team.image, alt:'imagen team')%> 2</p>
+    <p class="lead"><%= link_to TournamentTeam.where('tournament_id'=>tournament).all[0].team.name, { controller: "/team", action: "team", id: TournamentTeam.where('tournament_id'=>tournament).all[0].team}, class: 'link' %><%= image_tag(TournamentTeam.where('tournament_id'=>tournament).all[0].team.image, alt:'imagen team')%> 2</p>
   </div>
   <div class="col-md-2">
     <p class="lead"><%= image_tag('versus.png', alt: 'versus', width: '120') %></p>
   </div>
   <div class="col-lg-3">
-    <p class="lead">0 <%= image_tag(TournamentTeam.where('tournament_id'=>tournament).all[1].team.image, alt:'imagen team')%><%= link_to TournamentTeam.where('tournament_id'=>tournament).all[1].team.name, { controller: "team", action: "team", id: TournamentTeam.where('tournament_id'=>tournament).all[1].team}, class: 'link' %></p>
+    <p class="lead">0 <%= image_tag(TournamentTeam.where('tournament_id'=>tournament).all[1].team.image, alt:'imagen team')%><%= link_to TournamentTeam.where('tournament_id'=>tournament).all[1].team.name, { controller: "/team", action: "team", id: TournamentTeam.where('tournament_id'=>tournament).all[1].team}, class: 'link' %></p>
   </div>
 </div>
 <%

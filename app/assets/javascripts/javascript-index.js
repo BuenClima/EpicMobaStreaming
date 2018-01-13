@@ -6,7 +6,8 @@ function loadFirstStreamers() {
     $.getJSON("http://localhost:3000/api/getStreamers",function (dataJson) {
         var row = $(document.createElement('div'));
         row.addClass('row');
-        $.each(dataJson.data, function (index,element) {
+        console.log(dataJson[0].data);
+        $.each(dataJson[0].data, function (index,element) {
             if(index >= 3){
                 return;
             }

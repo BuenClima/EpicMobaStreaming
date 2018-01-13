@@ -6,12 +6,11 @@
     <%= favicon_link_tag "favico.png" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'bootstrap.min', media: 'all'%>
+    <%= javascript_include_tag 'jquery.min'%>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'bootstrap.min'%>
-    <%= javascript_include_tag 'jquery.min'%>
   </head>
   <body>
-  <% @games = Game.all %>
   <div class="container-fluid">
     <header class="header">
       <%= image_tag("logo.png",alt: "Logo")%>
@@ -20,31 +19,32 @@
       <div class="panel-heading">
         <nav class="navbar navbar-default">
           <div class="container-fluid">
-            <div class="navbar-header"><%= link_to "Epic Moba Steam", {controller: "home", action: "index"},class:"navbar-brand navbar-link"%>
+            <div class="navbar-header"><%= link_to "Epic Moba Steam", {controller: "/home", action: "index"},class:"navbar-brand navbar-link"%>
               <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"></button>
             </div>
             <div class="collapse navbar-collapse" id="navcol-1">
               <ul class="nav navbar-nav">
-                <li role="presentation"><%= link_to "Inicio", {controller: "home", action: "index"}%></li>
+                <li role="presentation"><%= link_to "Inicio", {controller: "/home", action: "index"}%></li>
                 <li role="presentation">
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Juegos <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <% @games.each do |game|%>
+                    <% games = Game.all %>
+                    <% games.each do |game|%>
                       <% case game.name %>
                     <% when "League of Legends" %>
-                        <li role="presentation"><%= link_to game.name, {controller: "game",action: "lol"} %></li>
+                        <li role="presentation"><%= link_to game.name, {controller: "/game",action: "lol"} %></li>
                       <% when "Dota 2" %>
-                        <li role="presentation"><%= link_to game.name, {controller: "game",action: "dota2"} %></li>
+                        <li role="presentation"><%= link_to game.name, {controller: "/game",action: "dota2"} %></li>
                       <% when "Heroes of the Storm" %>
-                        <li role="presentation"><%= link_to game.name, {controller: "game",action: "hots"} %></li>
+                        <li role="presentation"><%= link_to game.name, {controller: "/game",action: "hots"} %></li>
                       <% else %>
                       <% end %>
                     <% end %>
                   </ul>
                 </li>
-                <li role="presentation"><%= link_to "Contacto", {controller: "contact", action: "index"}%></li>
-                <li role="presentation"><%= link_to "Administración", {controller: "admin", action: "menu"}%></li>
+                <li role="presentation"><%= link_to "Contacto", {controller: "/contact", action: "index"}%></li>
+                <li role="presentation"><%= link_to "Administración", {controller: "/admin", action: "menu"}%></li>
               </ul>
             </div>
           </div>
@@ -52,8 +52,8 @@
       </div>
       <div class="panel-body">
         <div class="body-content">
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
+          <p class="lead notice"><%= notice %></p>
+          <p class="lead alert"><%= alert %></p>
           <%= yield %>
         </div>
       </div>

@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'time'
 
+User.create(name: "alex", lastname: "lopez", email: "alejandro@alsnet.es", password: "alex22", encrypted_password: "alex22")
+User.create(name: "diego", lastname: "martin", email: "diego@gmail.com", password: "diego22", encrypted_password: "diego22")
+
 lol = Game.create(name: 'League of Legends', created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
 dota = Game.create(name: 'Dota 2', created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
 hots = Game.create(name: 'Heroes of the Storm', created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
