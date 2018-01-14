@@ -1,24 +1,35 @@
-# README
+# Epic Moba Stream
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Secciones de la página
+1. Landing page
+	1. Enlace a perfil de equipos
+	2. Perfil de jugadores
+2. Sección de juegos
+	1. League of Legends
+	2. Dota 2
+	3. Heroes of Storm
+3. Streaming de un torneo
+4. Streaming normal (pro-player/emergente)
+5. Contacto
+6. Administración
+	1. Login
+	2. Listado del modelo
+	3. Enlaces al crud del modelo
 
-Things you may want to cover:
+### Tecnología Back-End utilizadas
+- Ruby version: 2.4.1p111
+- Rails version: 5.1.4
+- Ruby On Rails
+	- Erb para las vistas
+	- Gema devise para el login
+	- Sqlite3 para bases de datos
 
-* Ruby version
+### Tecnologías Front-End Utilizadas
+- HTML5
+- CSS3
+	- Bootstrap 3
+	- SCSS
+- Javascript
+	- JQuery
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Realizado por: Diego y Alejandro, grupo 4
