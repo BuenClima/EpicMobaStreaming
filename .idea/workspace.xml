@@ -3,72 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="257a5a60-6e55-40b1-93b7-d628e072cdc2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/admin.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/bets.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/champions.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/contact.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/contacts.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/game.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/games.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/home.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/javascript-index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/maps.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/matchups.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/player.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/players.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/players_map_performances.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/players_picks.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/statistics.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/streamer.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/streamers.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/team.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/teams.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/tournament.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/tournament_teams.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/tournaments.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/users.coffee" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/admin.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/bets.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/champions.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/contact.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/contacts.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/game.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/games.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/maps.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/matchups.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/player.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/players.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/players_map_performances.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/players_picks.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/statistics.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/streamer.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/streamers.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/team.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/teams.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/tournament.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/tournament_teams.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/tournaments.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/users.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/contact_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/contact_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/contacts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/contacts_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/game_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/game_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/menu.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/menu.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/contact/index.html.erb" afterPath="$PROJECT_DIR$/app/views/contact/index.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/contacts/_contact.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/contacts/_contact.json.jbuilder" />
-      <change beforePath="$PROJECT_DIR$/app/views/contacts/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/contacts/_form.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/contacts/index.html.erb" afterPath="$PROJECT_DIR$/app/views/contacts/index.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/contacts/show.html.erb" afterPath="$PROJECT_DIR$/app/views/contacts/show.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/game/dota2.html.erb" afterPath="$PROJECT_DIR$/app/views/game/dota2.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/game/hots.html.erb" afterPath="$PROJECT_DIR$/app/views/game/hots.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/game/lol.html.erb" afterPath="$PROJECT_DIR$/app/views/game/lol.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -111,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/game/dota2.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
-              <caret line="18" column="181" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <caret line="18" column="181" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -494,12 +428,12 @@
       <workItem from="1515871097317" duration="1301000" />
       <workItem from="1515872976828" duration="4459000" />
       <workItem from="1515886087314" duration="4070000" />
-      <workItem from="1515890181018" duration="3574000" />
+      <workItem from="1515890181018" duration="3857000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93129000" />
+    <option name="totallyTimeSpent" value="93412000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -512,7 +446,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1857" height="987" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28800443" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -523,7 +456,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287827" sideWeight="0.4819407" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287827" sideWeight="0.4819407" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -938,7 +871,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/game/dota2.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="18" column="181" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <caret line="18" column="181" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
