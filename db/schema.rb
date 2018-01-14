@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180103164312) do
+ActiveRecord::Schema.define(version: 20180109184035) do
 
   create_table "bets", force: :cascade do |t|
     t.string "name"
@@ -29,6 +29,16 @@ ActiveRecord::Schema.define(version: 20180103164312) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["game_id"], name: "index_champions_on_game_id"
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "gender"
+    t.string "visitant_type"
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "games", force: :cascade do |t|
@@ -50,15 +60,13 @@ ActiveRecord::Schema.define(version: 20180103164312) do
     t.integer "blue_team_id"
     t.integer "red_team_id"
     t.integer "winner_id"
-    t.integer "loose_id"
+    t.integer "looser_id"
     t.integer "tournament_id"
-    t.datetime "time"
-    t.string "rank"
-    t.datetime "create_at"
+    t.date "date"
     t.datetime "updated_at", null: false
     t.datetime "created_at", null: false
     t.index ["blue_team_id"], name: "index_matchups_on_blue_team_id"
-    t.index ["loose_id"], name: "index_matchups_on_loose_id"
+    t.index ["looser_id"], name: "index_matchups_on_looser_id"
     t.index ["red_team_id"], name: "index_matchups_on_red_team_id"
     t.index ["tournament_id"], name: "index_matchups_on_tournament_id"
     t.index ["winner_id"], name: "index_matchups_on_winner_id"
@@ -66,11 +74,12 @@ ActiveRecord::Schema.define(version: 20180103164312) do
 
   create_table "players", force: :cascade do |t|
     t.string "name"
-    t.string "lastname"
     t.string "nick"
     t.string "origin"
     t.integer "team_id"
     t.string "image"
+    t.text "biography"
+    t.string "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["team_id"], name: "index_players_on_team_id"
@@ -111,14 +120,15 @@ ActiveRecord::Schema.define(version: 20180103164312) do
   end
 
   create_table "streamers", force: :cascade do |t|
-    t.integer "twitch_user_id"
+    t.string "twitch_user_id"
     t.string "twitch_username"
     t.string "twitch_channel_url"
     t.string "name"
-    t.string "lastname"
-    t.date "birthday"
     t.integer "game_id"
+    t.string "image"
+    t.integer "streamer_type"
     t.datetime "created_at", null: false
+    t.datetime "update_at"
     t.datetime "updated_at", null: false
     t.index ["game_id"], name: "index_streamers_on_game_id"
   end
@@ -128,6 +138,7 @@ ActiveRecord::Schema.define(version: 20180103164312) do
     t.string "origin"
     t.string "coach"
     t.string "image"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -150,12 +161,20 @@ ActiveRecord::Schema.define(version: 20180103164312) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "lastname"
-    t.string "email"
-    t.string "password"
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end

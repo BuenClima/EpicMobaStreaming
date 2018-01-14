@@ -1,5 +1,6 @@
 class StreamersController < ApplicationController
   before_action :set_streamer, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /streamers
   # GET /streamers.json
@@ -69,6 +70,6 @@ class StreamersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def streamer_params
-      params.require(:streamer).permit(:twitch_user_id, :twitch_username, :twitch_channel_url, :name, :lastname, :birthday, :game_id, :created_at, :updated_at)
+      params.require(:streamer).permit(:twitch_user_id, :twitch_username, :twitch_channel_url, :name, :game_id, :image, :streamer_type, :created_at, :update_at)
     end
 end

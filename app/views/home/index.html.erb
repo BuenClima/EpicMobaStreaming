@@ -1,0 +1,105 @@
+<div class="body-header">
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="lead">Streams destacados</p>
+    </div>
+    <div class="col-sm-3 col-sm-offset-6">
+      <p class="lead">
+        Filtros&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal">&nbsp;&darr;&nbsp;</button>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="separator"></div>
+<div class="loadContent"></div>
+<div class="moreContent"></div>
+<div class="col-sm-3 col-sm-offset-9 loadButton">
+  <button type="button" onclick="loadMoreStreamers();" class="btn btn-default">Cargar más...</button>
+</div>
+
+<div class="title"><p class="lead">Información torneos</p></div>
+<div class="separator"></div>
+<%
+  i = 1
+  @tournaments.each do |tournament|
+%>
+<div class="title row">
+  <div class="col-md-6 col-lg-offset-2">
+    <p class="lead"><strong>Torneo <%= i %> (Bo 5):</strong> <%= tournament.name %>, <a class="link" href="tournament/index">ver ahora</a></p>
+  </div>
+</div>
+<div class="title row">
+  <div class="col-lg-3 col-lg-offset-2">
+    <p class="lead"><%= link_to TournamentTeam.where('tournament_id'=>tournament).all[0].team.name, { controller: "/team", action: "team", id: TournamentTeam.where('tournament_id'=>tournament).all[0].team}, class: 'link' %><%= image_tag(TournamentTeam.where('tournament_id'=>tournament).all[0].team.image, alt:'imagen team')%> 2</p>
+  </div>
+  <div class="col-md-2">
+    <p class="lead"><%= image_tag('versus.png', alt: 'versus', width: '120') %></p>
+  </div>
+  <div class="col-lg-3">
+    <p class="lead">0 <%= image_tag(TournamentTeam.where('tournament_id'=>tournament).all[1].team.image, alt:'imagen team')%><%= link_to TournamentTeam.where('tournament_id'=>tournament).all[1].team.name, { controller: "/team", action: "team", id: TournamentTeam.where('tournament_id'=>tournament).all[1].team}, class: 'link' %></p>
+  </div>
+</div>
+<%
+  i += 1
+  end
+%>
+<input type="hidden" id="streamerCursor" value="3">
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Filtrar streamers</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-xs-3">
+            <strong>Idioma</strong>
+          </div>
+          <div class="col-xs-3">
+            <label><input type="checkbox"> Español</label>
+          </div>
+          <div class="col-xs-3">
+            <label><input type="checkbox"> Inglés</label>
+          </div>
+          <div class="col-xs-3">
+            <label><input type="checkbox"> Coreano</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3">
+            <strong>Categoría</strong>
+          </div>
+          <div class="col-xs-3">
+            <label><input type="checkbox"> Torneo</label>
+          </div>
+          <div class="col-xs-3">
+            <label><input type="checkbox"> Jugador profesional</label>
+          </div>
+          <div class="col-xs-3">
+            <label><input type="checkbox"> Jugador emergente</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3">
+            <strong>Videojuego</strong>
+          </div>
+          <div class="col-xs-3">
+            <label><input type="checkbox"> League of legends</label>
+          </div>
+          <div class="col-xs-3">
+            <label><input type="checkbox"> Dota 2</label>
+          </div>
+          <div class="col-xs-3">
+            <label><input type="checkbox"> Heroes of storm</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="applyFilters();">Filtrar</button>
+      </div>
+    </div>
+  </div>
+</div>

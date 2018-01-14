@@ -1,0 +1,82 @@
+<% if !current_user.nil? %>
+  <p>Logged in as :  </p><%= current_user.email %>
+  <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+<% end %>
+<div class="body-header">
+  <div class="row">
+    <div class="col-sm-3">
+      <p class="lead">Menu de tablas</p>
+    </div>
+  </div>
+</div>
+<div class="separator"></div>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Link</th></tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Streamers</td>
+    <td><%= link_to "Streamers", {controller: "streamers", action: "index"}  %></td>
+  </tr>
+  <tr>
+    <td>Bets</td>
+    <td><%= link_to "Bets", {controller: "bets", action: "index"}  %></td>
+  </tr>
+  <tr>
+    <td>Champions</td>
+    <td><%= link_to "Champions", {controller: "champions", action: "index"}  %></td>
+  </tr>
+  <tr>
+    <td>Games</td>
+    <td><%= link_to "Games", {controller: "games", action: "index"}  %></td>
+  </tr>
+  <tr>
+    <td>Maps</td>
+    <td><%= link_to "Maps", {controller: "maps", action: "index"}  %></td>
+  </tr>
+  <tr>
+    <td>Matchups</td>
+    <td><%= link_to "Matchups", {controller: "matchups", action: "index"}  %></td>
+  </tr>
+  <tr>
+    <td>Players</td>
+    <td><%= link_to "Players", {controller: "players", action: "index"}  %></td>
+  </tr>
+  <tr>
+    <td>Players</td>
+    <td><%= link_to "Matchups", {controller: "matchups", action: "index"}  %></td>
+  </tr>
+  <tr>
+    <td>Player Map Performances</td>
+    <td><%= link_to "Player Map Performances", {controller: "players_map_performances", action: "index"}  %></td>
+  </tr>
+  <tr>
+    <td>Player Picks</td>
+    <td><%= link_to "Player Picks", {controller: "players_picks", action: "index"}  %></td>
+  </tr>
+  <tr>
+    <td>Statistics</td>
+    <td><%= link_to "Statistics", {controller: "statistics", action: "index"}  %></td>
+  </tr>
+  <tr>
+    <td>Teams</td>
+    <td><%= link_to "Teams", {controller: "teams", action: "index"}  %></td>
+  </tr>
+  <tr>
+    <td>Tournaments</td>
+    <td><%= link_to "Tournaments", {controller: "tournaments", action: "index"}  %></td>
+  </tr>
+  <tr>
+    <td>Tournaments Teams</td>
+    <td><%= link_to "Tournaments Teams", {controller: "tournament_teams", action: "index"}  %></td>
+  </tr>
+  <tr>
+    <td>Contacts</td>
+    <td><%= link_to "Contacts", {controller: "contacts", action: "index"}  %></td>
+  </tr>
+  </tbody>
+</table>

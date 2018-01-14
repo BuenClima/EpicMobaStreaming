@@ -1,14 +1,21 @@
 class Player < ApplicationRecord
   belongs_to :team
-  has_many :statistics
-  has_many :players_picks
-  has_many :champions, through: :players_picks
-  has_many :players_map_performances
-  has_many :maps, through: :players_map_performances
   validates :name,
-            :lastname,
             :nick,
-            :origin,
             :image,
+            :biography,
             presence: true
+  validates_uniqueness_of :nick
+  before_create :setcreateat
+  before_save :setupdatedate
+
+  private
+
+  def setcreateat
+    self.created_at =  Time.now.strftime('%d/%m/%Y %H:%M')
+  end
+
+  def setupdatedate
+    self.updated_at =  Time.now.strftime('%d/%m/%Y %H:%M')
+  end
 end

@@ -1,5 +1,6 @@
 class PlayersPicksController < ApplicationController
   before_action :set_players_pick, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /players_picks
   # GET /players_picks.json

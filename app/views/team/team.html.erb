@@ -1,0 +1,32 @@
+<div class="body-header text-center">
+  <p class="lead">
+    <strong>Equipo:</strong> <%= @team.name %> <%= image_tag(@team.image, alt: 'logo team') %>
+  </p>
+</div>
+<div class="separator"></div>
+<div class="title">
+  <p class="lead">Overview</p>
+  <p><%= @team.description %></p>
+  <p>
+    <strong>Coach:</strong> <%= @team.coach %>
+  </p>
+</div>
+<div class="title"><p class="lead">Roster del equipo</p></div>
+<table class="table">
+  <thead>
+  <th>Foto</th>
+  <th>Alias</th>
+  <th>Nombre</th>
+  <th>Posición</th>
+  </thead>
+  <tbody>
+  <% @items[1].each do |player| %>
+    <tr>
+      <td><%= image_tag(player.image, alt: 'player image', class: 'img-circle') %></td>
+      <td><%= link_to player.name, { controller: "player", action: "player", id: player}, class: 'link' %></td>
+      <td><%= player.name %></td>
+      <td><%= player.position %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

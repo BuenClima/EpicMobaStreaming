@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :twitch_user_id %>
-    <%= form.number_field :twitch_user_id, id: :streamer_twitch_user_id %>
+    <%= form.text_field :twitch_user_id, id: :streamer_twitch_user_id %>
   </div>
 
   <div class="field">
@@ -32,18 +32,18 @@
   </div>
 
   <div class="field">
-    <%= form.label :lastname %>
-    <%= form.text_field :lastname, id: :streamer_lastname %>
-  </div>
-
-  <div class="field">
-    <%= form.label :birthday %>
-    <%= form.date_select :birthday, id: :streamer_birthday %>
-  </div>
-
-  <div class="field">
     <%= form.label :game_id %>
     <%= form.text_field :game_id, id: :streamer_game_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image, id: :streamer_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :streamer_type %>
+    <%= form.number_field :streamer_type, id: :streamer_streamer_type %>
   </div>
 
   <div class="field">
@@ -52,8 +52,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :updated_at %>
-    <%= form.datetime_select :updated_at, id: :streamer_updated_at %>
+    <%= form.label :update_at %>
+    <%= form.datetime_select :update_at, id: :streamer_update_at %>
   </div>
 
   <div class="actions">

@@ -1,0 +1,64 @@
+<div class="body-header">
+  <p class="text-center"><%= image_tag('hots_logo.png', alt: 'logo hots') %></p>
+</div>
+
+<% if @items[1].length > 0 %>
+<div class="title"><p class="lead">Torneos</p></div>
+<div class="separator"></div>
+<div class="row">
+  <% @items[1].each do |item| %>
+    <div class="col-sm-4">
+      <div class='streamer'>
+        <div class='streamName'>
+          <p class="lead"><%= link_to item.twitch_username, {controller: 'tournament', action: 'index'}, class: 'link' %></p>
+        </div>
+        <div class='miniature'>
+          <%= link_to image_tag(item.image, class: 'img-fluid', alt: 'miniatura'), {controller: 'tournament', action: 'index'}, class: 'link' %>
+        </div>
+        <p class='stream-info'><strong><%= item.twitch_username %></strong> con <strong>1,002,234</strong> espectadores</p>
+        <p class='stream-info'><strong><%= link_to @items[4][0].red_team.name, {controller: 'team', action: 'team', id: @items[4][0].red_team.id}, class: 'link' %></strong> vs <strong><%= link_to @items[4][0].blue_team.name, {controller: 'team', action: 'team', id: @items[4][0].blue_team.id}, class: 'link' %></strong></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+<% end %>
+
+<% if @items[2].length > 0 %>
+<div class="title"><p class="lead">Jugadores profesionales</p></div>
+<div class="separator"></div>
+<div class="row">
+  <% @items[2].each do |item| %>
+    <div class="col-sm-4">
+      <div class='streamer'>
+        <div class='streamName'>
+          <p class="lead"><%= link_to item.twitch_username, {controller: 'streamer', action: 'index'}, class: 'link' %></p>
+        </div>
+        <div class='miniature'>
+          <%= link_to image_tag(item.image, class: 'img-fluid', alt: 'miniatura'), {controller: 'streamer', action: 'index'}, class: 'link' %>
+        </div>
+        <p class='stream-info'><strong><%= item.twitch_username %></strong> con <strong>441,213</strong> espectadores</p>
+      </div>
+    </div>
+  <% end %>
+</div>
+<% end %>
+
+<% if @items[3].length > 0 %>
+<div class="title"><p class="lead">Streamers emergentes</p></div>
+<div class="separator"></div>
+<div class="row">
+  <% @items[3].each do |item| %>
+    <div class="col-sm-4">
+      <div class='streamer'>
+        <div class='streamName'>
+          <p class="lead"><%= link_to item.twitch_username, {controller: 'streamer', action: 'index'}, class: 'link' %></p>
+        </div>
+        <div class='miniature'>
+          <%= link_to image_tag(item.image, class: 'img-fluid', alt: 'miniatura'), {controller: 'streamer', action: 'index'}, class: 'link' %>
+        </div>
+        <p class='stream-info'><strong><%= item.twitch_username %></strong> con <strong>1,257</strong> espectadores</p>
+      </div>
+    </div>
+  <% end %>
+</div>
+<% end %>

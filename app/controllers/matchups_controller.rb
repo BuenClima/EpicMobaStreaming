@@ -1,5 +1,6 @@
 class MatchupsController < ApplicationController
   before_action :set_matchup, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /matchups
   # GET /matchups.json
@@ -69,6 +70,6 @@ class MatchupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def matchup_params
-      params.require(:matchup).permit(:blue_team_id, :red_team_id, :winner_id, :loose_id, :tournament_id, :time, :rank, :create_at, :updated_at)
+      params.require(:matchup).permit(:blue_team_id, :red_team_id, :winner_id, :looser_id, :tournament_id, :date, :updated_at, :created_at)
     end
 end
