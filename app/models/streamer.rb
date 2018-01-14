@@ -13,6 +13,8 @@ class Streamer < ApplicationRecord
   before_create :setcreateat
   before_save :setupdatedate
 
+  scope :streamerByGameAndType, -> (game, streamer_type){where('game' => Game.find(game), 'streamer_type' => streamer_type)}
+
   private
 
   def setcreateat
