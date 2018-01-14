@@ -16,7 +16,7 @@
           <%= link_to image_tag(item.image, class: 'img-fluid', alt: 'miniatura'), {controller: 'tournament', action: 'index'}, class: 'link' %>
         </div>
         <p class='stream-info'><strong><%= item.twitch_username %></strong> con <strong>1,002,234</strong> espectadores</p>
-        <p class='stream-info'><strong><%= link_to @items[4][0].red_team.name %></strong> vs<strong><%= link_to @items[4][0].blue_team.name %></strong></p>
+        <p class='stream-info'><strong><%= link_to @items[4][0].red_team.name, {controller: 'team', action: 'team', id: @items[4][0].red_team.id}, class: 'link' %></strong> vs <strong><%= link_to @items[4][0].blue_team.name, {controller: 'team', action: 'team', id: @items[4][0].blue_team.id}, class: 'link' %></strong></p>
       </div>
     </div>
   <% end %>

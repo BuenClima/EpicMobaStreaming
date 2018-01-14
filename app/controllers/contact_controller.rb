@@ -7,12 +7,11 @@ class ContactController < ApplicationController
     @games = Game.all
     @sent = 'false'
     if request.method == "POST"
-      channel = params[:twitchChannel]
-      email = params[:email]
-      message = params[:message]
-      gender = params[:gender]
-      dateToPlay = params[:dateToPlay]
-      contact = Contact.new(:twitchChannel => channel, :email => email, :message => message, :gender => gender, :dateToPlay => dateToPlay)
+      contact = Contact.new(:name => params[:name],
+                            :email => params[:email],
+                            :gender => params[:gender],
+                            :visitant_type => params[:streamerType],
+                            :message => params[:message])
       contact.save
       @sent = 'true'
     end

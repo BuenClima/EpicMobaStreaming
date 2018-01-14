@@ -5,7 +5,7 @@ class GameController < ApplicationController
     professionals = Streamer.where('game' => Game.find(1), 'streamer_type' => 2).all
     new_streamers = Streamer.where('game' => Game.find(1), 'streamer_type' => 3).all
     matchups = Matchup.all
-    @items = [games, tournaments, professionals, new_streamers,matchups]
+    @items = [games, tournaments, professionals, new_streamers, matchups]
   end
 
   def hots
@@ -14,7 +14,7 @@ class GameController < ApplicationController
     professionals = Streamer.where('game' => Game.find(3), 'streamer_type' => 2).all
     new_streamers = Streamer.where('game' => Game.find(3), 'streamer_type' => 3).all
     matchups = Matchup.all
-    @items = [games, tournaments, professionals, new_streamers,matchups]
+    @items = [games, tournaments, professionals, new_streamers, matchups]
   end
 
   def dota2
@@ -23,6 +23,6 @@ class GameController < ApplicationController
     professionals = Streamer.where('game' => Game.find(2), 'streamer_type' => 2).all
     new_streamers = Streamer.where('game' => Game.find(2), 'streamer_type' => 3).all
     matchups = Matchup.all
-    @items = [games, tournaments, professionals, new_streamers,matchups]
+    @items = [games, tournaments, professionals, new_streamers, matchups]
   end
 end

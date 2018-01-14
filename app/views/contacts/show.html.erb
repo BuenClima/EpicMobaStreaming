@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Twitchchannel:</strong>
-  <%= @contact.twitchChannel %>
+  <strong>Name:</strong>
+  <%= @contact.name %>
 </p>
 
 <p>
@@ -11,18 +11,23 @@
 </p>
 
 <p>
-  <strong>Message:</strong>
-  <%= @contact.message %>
-</p>
-
-<p>
   <strong>Gender:</strong>
   <%= @contact.gender %>
 </p>
 
 <p>
-  <strong>Datetoplay:</strong>
-  <%= @contact.dateToPlay %>
+  <strong>Visitant type:</strong>
+  <%= @contact.visitant_type %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @contact.message %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @contact.created_at %>
 </p>
 
 <%= link_to 'Edit', edit_contact_path(@contact) %> |
