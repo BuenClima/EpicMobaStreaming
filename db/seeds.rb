@@ -1,14 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 require 'time'
-
-User.create(name: "alex", lastname: "lopez", email: "alejandro@alsnet.es", password: "alex22", encrypted_password: "alex22")
-User.create(name: "diego", lastname: "martin", email: "diego@gmail.com", password: "diego22", encrypted_password: "diego22")
 
 lol = Game.create(name: 'League of Legends', created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
 dota = Game.create(name: 'Dota 2', created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
@@ -91,17 +81,17 @@ tour2 = Tournament.create(name: 'Final Dota 2', date: Date.today, created_at: Ti
 TournamentTeam.create(tournament: tour2, team: ogt, created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
 TournamentTeam.create(tournament: tour2, team: ntt, created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
 
-mu = Matchup.create(blue_team: skt, red_team: ssb, winner: skt, looser: ssb, tournament: tour, date: Date.today, :created_at => Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
-mu2 = Matchup.create(blue_team: ogt, red_team: ntt, winner: ogt, looser: ntt, tournament: tour2, date: Date.today, :created_at => Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
+#mu = Matchup.create(blue_team: skt, red_team: ssb, winner: skt, looser: ssb, tournament: tour, date: Date.today, :created_at => Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
+#mu2 = Matchup.create(blue_team: ogt, red_team: ntt, winner: ogt, looser: ntt, tournament: tour2, date: Date.today, :created_at => Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
 
-Bet.create(name: 'Primera sangre para SSB', ratio: 1.4, matchup: mu, refered: 'https://www.betfair.es/sport/basketball')
-Bet.create(name: 'Primera sangre para SKT', ratio: 1.4, matchup: mu, refered: 'https://www.betfair.es/sport/basketball')
-Bet.create(name: 'Gana SKT', ratio: 1.4, matchup: mu, refered: 'https://www.betfair.es/sport/basketball')
-Bet.create(name: 'Gana SSB', ratio: 1.4, matchup: mu, refered: 'https://www.betfair.es/sport/basketball')
-Bet.create(name: 'Gana SKT por 3-0', ratio: 1.4, matchup: mu, refered: 'https://www.betfair.es/sport/basketball')
-Bet.create(name: 'Gana SSB por 3-1', ratio: 1.4, matchup: mu, refered: 'https://www.betfair.es/sport/basketball')
-Bet.create(name: 'El top de SSB tiene un kda de 1:2:3', ratio: 1.4, matchup: mu, refered: 'https://www.betfair.es/sport/basketball')
-Bet.create(name: 'El top de SKT tiene un kda de 3:2:1', ratio: 1.4, matchup: mu, refered: 'https://www.betfair.es/sport/basketball')
+Bet.create(name: 'Primera sangre para SSB', ratio: 1.4, matchup: nil, refered: 'https://www.betfair.es/sport/basketball')
+Bet.create(name: 'Primera sangre para SKT', ratio: 1.4, matchup: nil, refered: 'https://www.betfair.es/sport/basketball')
+Bet.create(name: 'Gana SKT', ratio: 1.4, matchup: nil, refered: 'https://www.betfair.es/sport/basketball')
+Bet.create(name: 'Gana SSB', ratio: 1.4, matchup: nil, refered: 'https://www.betfair.es/sport/basketball')
+Bet.create(name: 'Gana SKT por 3-0', ratio: 1.4, matchup: nil, refered: 'https://www.betfair.es/sport/basketball')
+Bet.create(name: 'Gana SSB por 3-1', ratio: 1.4, matchup: nil, refered: 'https://www.betfair.es/sport/basketball')
+Bet.create(name: 'El top de SSB tiene un kda de 1:2:3', ratio: 1.4, matchup: nil, refered: 'https://www.betfair.es/sport/basketball')
+Bet.create(name: 'El top de SKT tiene un kda de 3:2:1', ratio: 1.4, matchup: nil, refered: 'https://www.betfair.es/sport/basketball')
 
 Statistic.create(ratio: 0.8, name: 'Primera sangre', player: a, team: skt, created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
 Statistic.create(ratio: 0.8, name: 'Primera sangre', player: b, team: skt, created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
@@ -127,4 +117,4 @@ Streamer.create(image: 'live_user_stray228-320x180.jpg', twitch_user_id: 123453,
 Streamer.create(image: 'live_user_carritoskami-320x180.jpg', twitch_user_id: 123454, twitch_username: 'Streamer10', twitch_channel_url: 'https://www.twitch.tv/imaqtpie', name: 'imaqtpie', streamer_type: 3, game: dota, created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
 Streamer.create(image: 'live_dota2_final.png', twitch_user_id: 123455, twitch_username: 'ESL Spain', twitch_channel_url: 'eslspain', name: 'eslspain', streamer_type: 1, game: dota, created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))
 
-Contact.create(twitchChannel: 'lolete', email: 'alguien@quien.com', message: 'hola, me gustaria estar en la web', dateToPlay: Time.now.strftime('%d/%m/%Y %H:%M'), gender: 1)
+Contact.create(name: "lolete", email: "alguno@gmail.com", gender: "m", visitant_type: "streamer", message: "quiero aparecer en vuestra web", created_at: Time.now.strftime('%d/%m/%Y %H:%M'), updated_at: Time.now.strftime('%d/%m/%Y %H:%M'))

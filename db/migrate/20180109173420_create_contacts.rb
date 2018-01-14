@@ -1,11 +1,12 @@
 class CreateContacts < ActiveRecord::Migration[5.1]
   def change
     create_table :contacts do |t|
-      t.string :twitchChannel
+      t.string :name
       t.string :email
+      t.string :gender
+      t.string :visitant_type
       t.text :message
-      t.integer :gender
-      t.datetime :dateToPlay
+      t.datetime :created_at
 
       t.timestamps
     end

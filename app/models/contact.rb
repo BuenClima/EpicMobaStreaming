@@ -1,9 +1,9 @@
 class Contact < ApplicationRecord
-  validates :twitchChannel,
+  validates :name,
             :email,
-            :message,
             :gender,
-            :dateToPlay,
+            :visitant_type,
+            :message,
             presence: true
   before_create :insertdate
 
